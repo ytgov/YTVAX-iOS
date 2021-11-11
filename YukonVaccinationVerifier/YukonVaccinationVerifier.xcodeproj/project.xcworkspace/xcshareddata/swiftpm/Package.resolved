@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
+        }
+      },
+      {
+        "package": "BCVaccineValidator",
+        "repositoryURL": "https://github.com/FreshworksStudio/BCVaccineValidator.git",
+        "state": {
+          "branch": null,
+          "revision": "d43887109bc9281f570e10d3e2399476b635cf8f",
+          "version": "1.2.22"
+        }
+      },
+      {
+        "package": "JOSESwift",
+        "repositoryURL": "https://github.com/airsidemobile/JOSESwift",
+        "state": {
+          "branch": null,
+          "revision": "10ed3b6736def7c26eb87135466b1cb46ea7e37f",
+          "version": "2.4.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

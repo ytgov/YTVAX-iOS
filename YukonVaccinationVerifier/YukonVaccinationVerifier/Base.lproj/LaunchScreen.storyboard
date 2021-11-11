@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,8 +15,53 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wH6-xY-ehv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yukonGovLogo" translatesAutoresizingMaskIntoConstraints="NO" id="LCo-Ht-6cW">
+                                        <rect key="frame" x="165" y="32" width="84.5" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Ro0-jp-30E"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="BKM-wv-dDi">
+                                        <rect key="frame" x="84" y="331" width="246.5" height="156"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="in1-lO-7lp">
+                                                <rect key="frame" x="73" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="in1-lO-7lp" secondAttribute="height" multiplier="1:1" id="t9a-Y3-P1n"/>
+                                                    <constraint firstAttribute="width" constant="100" id="v5q-rc-O6R"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yukon Vaccination Verifier" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnm-gO-hHU">
+                                                <rect key="frame" x="0.0" y="132" width="246.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BKM-wv-dDi" firstAttribute="centerX" secondItem="wH6-xY-ehv" secondAttribute="centerX" id="1dz-dk-hgM"/>
+                                    <constraint firstItem="LCo-Ht-6cW" firstAttribute="centerX" secondItem="wH6-xY-ehv" secondAttribute="centerX" id="49N-nw-oiL"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LCo-Ht-6cW" secondAttribute="trailing" constant="8" id="JXq-vb-MQp"/>
+                                    <constraint firstItem="BKM-wv-dDi" firstAttribute="centerY" secondItem="wH6-xY-ehv" secondAttribute="centerY" id="Peu-so-mRn"/>
+                                    <constraint firstItem="LCo-Ht-6cW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wH6-xY-ehv" secondAttribute="leading" constant="8" id="Xo7-v1-v4r"/>
+                                    <constraint firstItem="LCo-Ht-6cW" firstAttribute="top" secondItem="wH6-xY-ehv" secondAttribute="top" constant="32" id="brg-P9-5G5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.29803921568627451" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wH6-xY-ehv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dod-LR-2JH"/>
+                            <constraint firstAttribute="trailing" secondItem="wH6-xY-ehv" secondAttribute="trailing" id="fUO-oc-4RG"/>
+                            <constraint firstItem="wH6-xY-ehv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rfV-2R-DLs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="wH6-xY-ehv" secondAttribute="top" id="zn7-Ut-jI3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,8 +70,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="appLogo" width="100" height="100"/>
+        <image name="yukonGovLogo" width="84.5" height="33"/>
     </resources>
 </document>
