@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  YukonVaccinationVerifier
+
+  Created by Mohamed Afsar on 02/11/21.
+  
+*/
+
+"View.Label.YukonVaccinationVerifier" = "Yukon Vaccination Verifier";
+"View.Label.BusinessesCanScan...credentials" = "Businesses can scan official Government of Yukon digital or paper immunization credentials";
+"View.action.StartScanning" = "Start scanning";
+
+"View.Label.NoCameraAccess" = "No Camera Access";
+"View.Label.Camera...UseThisApp" = "Camera access is necessary to use this app.";
+
+"View.Label.Ok" = "Ok";
+
+"View.Label.FullyImmunized" = "Fully immunized";
+"View.Label.OfficialGovernmentOfYukonResult" = "Official Government of Yukon result";
+"View.Label.PartiallyImmunized" = "Partially immunized";
+"View.Label.NoRecordsFound" = "No Records Found";
+
+"View.action.ScanNext" = "Scan next";
+
+"View.Label.PleaseUpdate" = "Please Update";
+"View.Label.ANewVersion...AppStore" = "A new version of this app is available on the app store";

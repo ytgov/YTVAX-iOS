@@ -3,25 +3,64 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A241D27303BA4003331F9 /* AppDelegate.swift */; };
-		F96A242227303BA4003331F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A242127303BA4003331F9 /* ViewController.swift */; };
 		F96A242527303BA4003331F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96A242327303BA4003331F9 /* Main.storyboard */; };
 		F96A242727303BA7003331F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96A242627303BA7003331F9 /* Assets.xcassets */; };
 		F96A242A27303BA7003331F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96A242827303BA7003331F9 /* LaunchScreen.storyboard */; };
+		F96A2437273044F2003331F9 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2433273044F2003331F9 /* Montserrat-Italic.ttf */; };
+		F96A2438273044F2003331F9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */; };
+		F96A2439273044F2003331F9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */; };
+		F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */; };
+		F9ACC7AC273158E0004B9380 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */; };
+		F9ACC7AD273158E0004B9380 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9ACC7AB273158E0004B9380 /* OnBoardingView.xib */; };
+		F9ACC7B127315927004B9380 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7AF27315927004B9380 /* Constants.swift */; };
+		F9ACC7B227315927004B9380 /* AccessibilityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B027315927004B9380 /* AccessibilityConstants.swift */; };
+		F9ACC7B927315962004B9380 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B427315962004B9380 /* Date.swift */; };
+		F9ACC7BA27315962004B9380 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B527315962004B9380 /* UIView.swift */; };
+		F9ACC7BB27315962004B9380 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B627315962004B9380 /* UIColor.swift */; };
+		F9ACC7BC27315962004B9380 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B727315962004B9380 /* String.swift */; };
+		F9ACC7BD27315962004B9380 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B827315962004B9380 /* UIViewController.swift */; };
+		F9ACC7C027315B76004B9380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7BE27315B76004B9380 /* ViewController.swift */; };
+		F9ACC7C127315B76004B9380 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */; };
+		F9ACC7C42731712C004B9380 /* BCVaccineValidator in Frameworks */ = {isa = PBXBuildFile; productRef = F9ACC7C32731712C004B9380 /* BCVaccineValidator */; };
+		F9ACC7C627317190004B9380 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7C527317190004B9380 /* UpdateManager.swift */; };
+		F9ACC7CA273179DC004B9380 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9ACC7CC273179DC004B9380 /* Localizable.strings */; };
+		F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CD27317B84004B9380 /* String+Ext.swift */; };
+		F9ACC7D027317C8C004B9380 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */; };
+		F9FB64602731920600E4C44D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FB645F2731920600E4C44D /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F96A241A27303BA4003331F9 /* YukonVaccinationVerifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YukonVaccinationVerifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96A241D27303BA4003331F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F96A242127303BA4003331F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F96A242427303BA4003331F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F96A242627303BA7003331F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F96A242927303BA7003331F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F96A242B27303BA7003331F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F96A2433273044F2003331F9 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		F9ACC7AB273158E0004B9380 /* OnBoardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		F9ACC7AF27315927004B9380 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9ACC7B027315927004B9380 /* AccessibilityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityConstants.swift; sourceTree = "<group>"; };
+		F9ACC7B427315962004B9380 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		F9ACC7B527315962004B9380 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F9ACC7B627315962004B9380 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F9ACC7B727315962004B9380 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F9ACC7B827315962004B9380 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F9ACC7BE27315B76004B9380 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanResultViewController.swift; sourceTree = "<group>"; };
+		F9ACC7C527317190004B9380 /* UpdateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateManager.swift; sourceTree = "<group>"; };
+		F9ACC7CB273179DC004B9380 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F9ACC7CD27317B84004B9380 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		F9FB645F2731920600E4C44D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9ACC7C42731712C004B9380 /* BCVaccineValidator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,13 +95,80 @@
 			isa = PBXGroup;
 			children = (
 				F96A241D27303BA4003331F9 /* AppDelegate.swift */,
-				F96A242127303BA4003331F9 /* ViewController.swift */,
 				F96A242327303BA4003331F9 /* Main.storyboard */,
 				F96A242627303BA7003331F9 /* Assets.xcassets */,
+				F9FB645F2731920600E4C44D /* Colors.xcassets */,
+				F9ACC7AE27315927004B9380 /* Constants */,
+				F9ACC7B327315962004B9380 /* Extensions & utilities */,
+				F96A24312730440C003331F9 /* Fonts */,
 				F96A242827303BA7003331F9 /* LaunchScreen.storyboard */,
 				F96A242B27303BA7003331F9 /* Info.plist */,
+				F9ACC7C7273179AA004B9380 /* Localization */,
+				F9ACC7A9273158E0004B9380 /* OnBoarding */,
+				F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */,
+				F9ACC7C527317190004B9380 /* UpdateManager.swift */,
+				F9ACC7BE27315B76004B9380 /* ViewController.swift */,
 			);
 			path = YukonVaccinationVerifier;
+			sourceTree = "<group>";
+		};
+		F96A24312730440C003331F9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F96A243227304419003331F9 /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F96A243227304419003331F9 /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */,
+				F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */,
+				F96A2433273044F2003331F9 /* Montserrat-Italic.ttf */,
+				F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		F9ACC7A9273158E0004B9380 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */,
+				F9ACC7AB273158E0004B9380 /* OnBoardingView.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		F9ACC7AE27315927004B9380 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F9ACC7AF27315927004B9380 /* Constants.swift */,
+				F9ACC7B027315927004B9380 /* AccessibilityConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F9ACC7B327315962004B9380 /* Extensions & utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F9ACC7B427315962004B9380 /* Date.swift */,
+				F9ACC7B727315962004B9380 /* String.swift */,
+				F9ACC7CD27317B84004B9380 /* String+Ext.swift */,
+				F9ACC7B527315962004B9380 /* UIView.swift */,
+				F9ACC7B627315962004B9380 /* UIColor.swift */,
+				F9ACC7B827315962004B9380 /* UIViewController.swift */,
+				F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */,
+			);
+			path = "Extensions & utilities";
+			sourceTree = "<group>";
+		};
+		F9ACC7C7273179AA004B9380 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F9ACC7CC273179DC004B9380 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +187,9 @@
 			dependencies = (
 			);
 			name = YukonVaccinationVerifier;
+			packageProductDependencies = (
+				F9ACC7C32731712C004B9380 /* BCVaccineValidator */,
+			);
 			productName = YukonVaccinationVerifier;
 			productReference = F96A241A27303BA4003331F9 /* YukonVaccinationVerifier.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +217,9 @@
 				Base,
 			);
 			mainGroup = F96A241127303BA4003331F9;
+			packageReferences = (
+				F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */,
+			);
 			productRefGroup = F96A241B27303BA4003331F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,8 +235,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96A242A27303BA7003331F9 /* LaunchScreen.storyboard in Resources */,
+				F9ACC7AD273158E0004B9380 /* OnBoardingView.xib in Resources */,
+				F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */,
 				F96A242727303BA7003331F9 /* Assets.xcassets in Resources */,
+				F9ACC7CA273179DC004B9380 /* Localizable.strings in Resources */,
+				F9FB64602731920600E4C44D /* Colors.xcassets in Resources */,
+				F96A2439273044F2003331F9 /* Montserrat-Bold.ttf in Resources */,
 				F96A242527303BA4003331F9 /* Main.storyboard in Resources */,
+				F96A2438273044F2003331F9 /* Montserrat-Regular.ttf in Resources */,
+				F96A2437273044F2003331F9 /* Montserrat-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +254,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F96A242227303BA4003331F9 /* ViewController.swift in Sources */,
+				F9ACC7D027317C8C004B9380 /* UIFont+Ext.swift in Sources */,
+				F9ACC7C027315B76004B9380 /* ViewController.swift in Sources */,
+				F9ACC7AC273158E0004B9380 /* OnBoardingView.swift in Sources */,
+				F9ACC7B927315962004B9380 /* Date.swift in Sources */,
+				F9ACC7B227315927004B9380 /* AccessibilityConstants.swift in Sources */,
+				F9ACC7BC27315962004B9380 /* String.swift in Sources */,
+				F9ACC7BD27315962004B9380 /* UIViewController.swift in Sources */,
+				F9ACC7BA27315962004B9380 /* UIView.swift in Sources */,
+				F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */,
+				F9ACC7BB27315962004B9380 /* UIColor.swift in Sources */,
+				F9ACC7C627317190004B9380 /* UpdateManager.swift in Sources */,
+				F9ACC7C127315B76004B9380 /* ScanResultViewController.swift in Sources */,
 				F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */,
+				F9ACC7B127315927004B9380 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +288,14 @@
 				F96A242927303BA7003331F9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F9ACC7CC273179DC004B9380 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9ACC7CB273179DC004B9380 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -301,15 +441,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TCH45SXZ69;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = Z593J8PD3M;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.YukonVaccinationVerifier;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.yk.gov.vaxcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Yukon Vaccine Verifier distribution";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +479,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FreshworksStudio/BCVaccineValidator.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.22;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9ACC7C32731712C004B9380 /* BCVaccineValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */;
+			productName = BCVaccineValidator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F96A241227303BA4003331F9 /* Project object */;
 }
