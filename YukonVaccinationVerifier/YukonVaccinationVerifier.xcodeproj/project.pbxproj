@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */; };
 		F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A241D27303BA4003331F9 /* AppDelegate.swift */; };
 		F96A242527303BA4003331F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96A242327303BA4003331F9 /* Main.storyboard */; };
 		F96A242727303BA7003331F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96A242627303BA7003331F9 /* Assets.xcassets */; };
@@ -26,7 +27,6 @@
 		F9ACC7BD27315962004B9380 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7B827315962004B9380 /* UIViewController.swift */; };
 		F9ACC7C027315B76004B9380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7BE27315B76004B9380 /* ViewController.swift */; };
 		F9ACC7C127315B76004B9380 /* ScanResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */; };
-		F9ACC7C42731712C004B9380 /* BCVaccineValidator in Frameworks */ = {isa = PBXBuildFile; productRef = F9ACC7C32731712C004B9380 /* BCVaccineValidator */; };
 		F9ACC7C627317190004B9380 /* UpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7C527317190004B9380 /* UpdateManager.swift */; };
 		F9ACC7CA273179DC004B9380 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9ACC7CC273179DC004B9380 /* Localizable.strings */; };
 		F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CD27317B84004B9380 /* String+Ext.swift */; };
@@ -35,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.debug.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.debug.xcconfig"; sourceTree = "<group>"; };
+		D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.release.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.release.xcconfig"; sourceTree = "<group>"; };
 		F96A241A27303BA4003331F9 /* YukonVaccinationVerifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YukonVaccinationVerifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96A241D27303BA4003331F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96A242427303BA4003331F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,18 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9ACC7C42731712C004B9380 /* BCVaccineValidator in Frameworks */,
+				7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66974E69460EEF29B36209CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D89F097884C13647125BCC0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */,
+				D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F96A241127303BA4003331F9 = {
 			isa = PBXGroup;
 			children = (
 				F96A241C27303BA4003331F9 /* YukonVaccinationVerifier */,
 				F96A241B27303BA4003331F9 /* Products */,
+				D89F097884C13647125BCC0E /* Pods */,
+				66974E69460EEF29B36209CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,18 +200,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96A242E27303BA7003331F9 /* Build configuration list for PBXNativeTarget "YukonVaccinationVerifier" */;
 			buildPhases = (
+				59CB70843BB61CFFC06C31E7 /* [CP] Check Pods Manifest.lock */,
 				F96A241627303BA4003331F9 /* Sources */,
 				F96A241727303BA4003331F9 /* Frameworks */,
 				F96A241827303BA4003331F9 /* Resources */,
+				2E2A4A52C28A5802BF0F959C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = YukonVaccinationVerifier;
-			packageProductDependencies = (
-				F9ACC7C32731712C004B9380 /* BCVaccineValidator */,
-			);
 			productName = YukonVaccinationVerifier;
 			productReference = F96A241A27303BA4003331F9 /* YukonVaccinationVerifier.app */;
 			productType = "com.apple.product-type.application";
@@ -217,9 +238,6 @@
 				Base,
 			);
 			mainGroup = F96A241127303BA4003331F9;
-			packageReferences = (
-				F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */,
-			);
 			productRefGroup = F96A241B27303BA4003331F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -248,6 +266,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E2A4A52C28A5802BF0F959C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59CB70843BB61CFFC06C31E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YukonVaccinationVerifier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F96A241627303BA4003331F9 /* Sources */ = {
@@ -419,10 +479,12 @@
 		};
 		F96A242F27303BA7003331F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -438,11 +500,13 @@
 		};
 		F96A243027303BA7003331F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = Z593J8PD3M;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,25 +543,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/FreshworksStudio/BCVaccineValidator.git";
-			requirement = {
-				kind = exactVersion;
-				version = 1.2.22;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F9ACC7C32731712C004B9380 /* BCVaccineValidator */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9ACC7C22731712C004B9380 /* XCRemoteSwiftPackageReference "BCVaccineValidator" */;
-			productName = BCVaccineValidator;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F96A241227303BA4003331F9 /* Project object */;
 }
