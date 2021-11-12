@@ -18,9 +18,9 @@ internal extension String {
     
     static let ok = NSLocalizedString("View.Label.Ok", comment: "")
     
-    static let fullyImmunized = NSLocalizedString("View.Label.FullyImmunized", comment: "")
+    static let fullyVaccinated = NSLocalizedString("View.Label.FullyVaccinated", comment: "")
     static let officialGovernmentOfYukonResult = NSLocalizedString("View.Label.OfficialGovernmentOfYukonResult", comment: "")
-    static let partiallyImmunized = NSLocalizedString("View.Label.PartiallyImmunized", comment: "")
+    static let partiallyVaccinated = NSLocalizedString("View.Label.PartiallyVaccinated", comment: "")
     static let noRecordsFound = NSLocalizedString("View.Label.NoRecordsFound", comment: "")
     static let scanNext = NSLocalizedString("View.action.ScanNext", comment: "")
     
