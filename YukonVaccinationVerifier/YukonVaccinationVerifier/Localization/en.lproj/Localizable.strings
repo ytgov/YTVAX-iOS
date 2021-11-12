@@ -15,9 +15,9 @@
 
 "View.Label.Ok" = "Ok";
 
-"View.Label.FullyImmunized" = "Fully immunized";
+"View.Label.FullyVaccinated" = "Fully vaccinated";
 "View.Label.OfficialGovernmentOfYukonResult" = "Official Government of Yukon result";
-"View.Label.PartiallyImmunized" = "Partially immunized";
+"View.Label.PartiallyVaccinated" = "Partially vaccinated";
 "View.Label.NoRecordsFound" = "No Records Found";
 
 "View.action.ScanNext" = "Scan next";
