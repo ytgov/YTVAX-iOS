@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func alert(title: String, message: String) {
+    
+    func alert(title: String?, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: String.ok, style: .default))
         DispatchQueue.main.async {

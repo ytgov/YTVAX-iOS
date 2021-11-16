@@ -38,7 +38,8 @@ struct Constants {
                 static let message = "There are multiple QR codes in view"
             }
             struct InvalidCode {
-                static let message = "Invalid QR Code"
+                static let title = "Invalid QR Code"
+                static let message = "Please scan an official government-issued QR code"
             }
             struct VideoNotSupported {
                 static let title = "Unsupported Device"

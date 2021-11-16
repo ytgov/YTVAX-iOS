@@ -320,6 +320,10 @@ class ViewController: UIViewController {
         view.addSubview(logoImageView)
         
         logoImageView.image = UIImage(named: "onCameraLogo")
+        
+        // Add Business Guidance Links
+        
+        BusinessGuidance.setupView(in: self, links: [BusinessGuidanceLink(title: "COVID-19 information", url: "https://yukon.ca/en/covid-19-information"), BusinessGuidanceLink(title: "Data collection notice", url: nil)])
     }
 }
 
@@ -447,7 +451,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             validate(code: stringValue)
         } else {
             // Show message
-            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+            self.alert(title: Constants.Strings.Errors.InvalidCode.title, message: Constants.Strings.Errors.InvalidCode.message)
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
         }
@@ -468,12 +472,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     switch result.status {
                     case .ValidCode:
                         break
-                    case .InvalidCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .ForgedCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .MissingData:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                    case .InvalidCode, .ForgedCode, .MissingData:
+                        self.alert(title: Constants.Strings.Errors.InvalidCode.title, message: Constants.Strings.Errors.InvalidCode.message)
                     }
                     self.startCamera()
                     self.invalidScannedCodes.append(code)
@@ -501,7 +501,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         for (index, item) in metadataObjects.enumerated() {
             showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
         }
-        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message)
+        self.alert(title: nil, message: Constants.Strings.Errors.MultipleQRCodes.message)
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
