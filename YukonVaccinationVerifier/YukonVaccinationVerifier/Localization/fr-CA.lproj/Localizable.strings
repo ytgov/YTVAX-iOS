@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  YukonVaccinationVerifier
+
+  Created by Mohamed Afsar on 02/11/21.
+  
+*/
+
+"View.Label.YukonVaccinationVerifier" = "FR - Yukon Vaccination Verifier";
+"View.Label.UseThis...QRcode" = "FR - Use this service to scan an official government-issued QR code";
+"View.Label.NoCameraAccess" = "FR - No Camera Access";
+"View.Label.Camera...UseThisApp" = "FR - Camera access is necessary to use this app.";
+"View.Label.FullyVaccinated" = "FR - Fully vaccinated";
+"View.Label.OfficialGovernmentOfYukonResult" = "FR - Official Government of Yukon result";
+"View.Label.PartiallyVaccinated" = "FR - Partially vaccinated";
+"View.Label.NoRecordsFound" = "FR - No Records Found";
+"View.Label.PleaseUpdate" = "FR - Please Update";
+"View.Label.ANewVersion...AppStore" = "FR - A new version of this app is available on the app store";
+
+"View.Action.StartScanning" = "FR - Start scanning";
+"View.Action.Ok" = "FR - Ok";
+"View.Action.ScanNext" = "FR - Scan next";
+
+"View.Error.There...codesInView" = "FR - There are multiple QR codes in view";
+"View.Error.InvalidQRCode" = "FR - Invalid QR Code";
+"View.Error.UnsupportedDevice" = "FR - Unsupported Device";
+"View.Error.Please...SupportsVideoCapture" = "FR - Please use a device that supports video capture.";
+"View.Error.YourDevice...scanning" = "FR - Your device does not support QR code scanning.";
+
+"Accessibility.Label.languageSelectionView" = "FR - Language selection view";
+"Accessibility.Label.yukonLogo" = "FR - Government of Yukon logo";
+"Accessibility.Label.vaccinationVerifier" = "FR - Vaccination verifier";
+"Accessibility.Label.appIcon" = "FR - App icon";
+"Accessibility.Label.englishButton" = "FR - English button";
+"Accessibility.Label.frenchButton" = "FR - French button";
+"Accessibility.Label.onboardingView" = "FR - Onboarding view";
+"Accessibility.Label.allowCameraAccess" = "FR - Allow camera access";
+"Accessibility.Label.phoneImage" = "FR - Phone image";
+"Accessibility.Label.cameraScreen" = "FR - Camera screen";
+"Accessibility.Label.turnOnTorchLight" = "FR - Turn on torch light";
+"Accessibility.Label.turnOffTorchLight" = "FR - Turn off torch light";
+"Accessibility.Label.switchLanguage" = "FR - Switch language";
+"Accessibility.Label.immunizationStatus" = "FR - Immunization status";
+
+"Accessibility.Value.englishButton" = "FR - Selects English";
+"Accessibility.Value.frenchButton" = "FR - Selects French";

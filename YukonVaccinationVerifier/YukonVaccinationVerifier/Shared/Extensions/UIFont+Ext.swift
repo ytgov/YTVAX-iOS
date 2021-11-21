@@ -14,7 +14,6 @@ internal extension UIFont {
         case italic = "Montserrat-Italic"
         case boldItalic = "Montserrat-BoldItalic"
         case bold = "Montserrat-Bold"
-        
     }
     
     static func themeFont(size: CGFloat, style: ThemeStyle = .regular) -> UIFont {

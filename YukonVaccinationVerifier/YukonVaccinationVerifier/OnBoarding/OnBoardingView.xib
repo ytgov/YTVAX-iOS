@@ -83,6 +83,7 @@
                 <outlet property="onBoardImage" destination="7rb-r1-l2e" id="rbM-4c-MmL"/>
                 <outlet property="onBoardSubtitle" destination="oe8-ED-LtU" id="15V-OI-CFz"/>
                 <outlet property="onBoardTitle" destination="2dF-p0-v9b" id="DLE-zY-XhU"/>
+                <outlet property="phoneImgVw" destination="Qb9-G8-B9f" id="OIw-2K-eyG"/>
             </connections>
             <point key="canvasLocation" x="139" y="154"/>
         </view>

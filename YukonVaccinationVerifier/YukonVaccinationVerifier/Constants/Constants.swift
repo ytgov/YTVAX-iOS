@@ -21,32 +21,32 @@ struct Constants {
     }
     
     struct Strings {
-        static let vaccinationStatusHeader = String.yukonVaccinationVerifier
-        static let scanAgain = String.scanNext
+        static var vaccinationStatusHeader: String { .yukonVaccinationVerifier }
+        static var scanAgain: String { .scanNext }
         
         struct shouldUpdate {
-            static let title = String.pleaseUpdate
-            static let message = String.aNewVersion_AppStore
+            static var title: String { .pleaseUpdate }
+            static var message: String { .aNewVersion_AppStore }
         }
         
         struct Errors {
             struct CameraAccessIsNecessary {
-                static let title = String.noCameraAccess
-                static let message = String.camera_UseThisApp
+                static var title: String { .noCameraAccess }
+                static var message: String { .camera_UseThisApp }
             }
             struct MultipleQRCodes {
-                static let message = "There are multiple QR codes in view"
+                static var message: String { .there_codesInView }
             }
             struct InvalidCode {
-                static let message = "Invalid QR Code"
+                static var message: String { .invalidQRCode }
             }
             struct VideoNotSupported {
-                static let title = "Unsupported Device"
-                static let message = "Please use a device that supports video capture."
+                static var title: String { .unsupportedDevice }
+                static var message: String { .please_supportsVideoCapture }
             }
             struct QRScanningNotSupported {
-                static let title = "Unsupported Device"
-                static let message = "Your device does not support QR code scanning."
+                static var title: String { .unsupportedDevice }
+                static var message: String { .yourDevice_scanning }
             }
         }
     }
@@ -65,6 +65,10 @@ struct Constants {
             static let buttonSize: CGFloat = 42
         }
         
+        struct LanguageControlView {
+            static let tag = 98765
+        }
+                
         struct CameraView {
             struct CameraCutout {
                 static let fillLayerName = "cutout-fill-layer"
@@ -116,9 +120,9 @@ struct Constants {
         
         struct onBoarding {
             static let tag = 3124145
-            static let title = String.yukonVaccinationVerifier
-            static let subtitle = String.businessesCanScan_Credentials
-            static let buttonTitle = String.startScanning
+            static var title: String { .yukonVaccinationVerifier }
+            static var subtitle: String { .useThis_QRcode }
+            static var buttonTitle: String { .startScanning }
             
             static let titleFont: UIFont = .themeFont(size: 20, style: .bold)
             static let subtitleFont: UIFont = .themeFont(size: 16, style: .regular)
@@ -192,19 +196,19 @@ struct Constants {
             // MARK: Status Colours
             struct fullyVaccinated {
                 static let color = UIColor(hexString: "#244402")
-                static let cardTitle = String.fullyVaccinated
-                static let cardSubtitle = String.officialGovernmentOfYukonResult
+                static var cardTitle: String { .fullyVaccinated }
+                static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
             struct partiallyVaccinated {
                 static let color = UIColor(hexString: "#F2A900")
-                static let cardTitle = String.partiallyVaccinated
-                static let cardSubtitle = String.officialGovernmentOfYukonResult
+                static var cardTitle: String { .partiallyVaccinated }
+                static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
             
             struct notVaccinated {
                 static let color = UIColor(hexString: "#b6b6b6")
-                static let cardTitle = String.noRecordsFound
-                static let cardSubtitle = String.officialGovernmentOfYukonResult
+                static var cardTitle: String { .noRecordsFound }
+                static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
         }
         
@@ -217,5 +221,14 @@ struct Constants {
             static let labelPadding: CGFloat = 8
             static let containerPadding: CGFloat = 16
         }
+    }
+    
+    enum SupportedLanguageCode: String {
+        case en
+        case fr_CA = "fr-CA" // NO I18N
+    }
+    
+    struct Key {
+        static let chosenLanguageCode = "chosenLanguageCode" // NO I18N
     }
 }
