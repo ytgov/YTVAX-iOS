@@ -7,6 +7,7 @@
 
 import Foundation
  
+/// Helps in localizing the strings based on the user preferred language
 internal final class LanguageService {
     // MARK: Internal Static Vars
     static var languageCode: Constants.SupportedLanguageCode {

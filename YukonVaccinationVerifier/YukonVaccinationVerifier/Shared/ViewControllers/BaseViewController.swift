@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Generic functionality of the app's ViewController added here
+/// Generic functionality of this app's ViewController is added here.
 internal class BaseViewController: UIViewController {
     // MARK: - Internal IVars
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

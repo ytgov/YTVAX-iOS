@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 import BCVaccineValidator
 
+/// The core screen that provides the camera interface to scan QR codes.
 internal final class ViewController: BaseViewController {
     // MARK: Constants
     private let flashOnIcon = UIImage(named: "flashOn")

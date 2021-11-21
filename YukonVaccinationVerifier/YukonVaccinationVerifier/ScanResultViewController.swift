@@ -8,6 +8,7 @@
 import UIKit
 import BCVaccineValidator
 
+/// Shows the result of the scanned QR code(Fully/Partically/Not vaccinated). 
 internal final class ScanResultViewController: BaseViewController {
     // MARK: Outlets
     @IBOutlet weak var scanButton: UIButton!

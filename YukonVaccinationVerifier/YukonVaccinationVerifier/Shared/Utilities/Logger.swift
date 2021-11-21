@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// A service that facilitates the console logs and also restricts them to the development environment.
 internal final class Logger {
     // MARK: Internal Static Vars
     internal static var shouldForceLog = false

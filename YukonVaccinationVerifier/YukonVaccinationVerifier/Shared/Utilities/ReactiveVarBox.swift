@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// A wrapper that fires a listener when the value changes. Acts similar to the 'CurrentValueSubject' of Apple's Combine framework API.
 public final class ReactiveVarBox<T> {
     // MARK: Typealiases
     internal typealias Listener = (T) -> Void
