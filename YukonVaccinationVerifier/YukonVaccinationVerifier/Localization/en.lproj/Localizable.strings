@@ -7,7 +7,7 @@
 */
 
 "View.Label.YukonVaccinationVerifier" = "Yukon Vaccination Verifier";
-"View.Label.BusinessesCanScan...credentials" = "Businesses can scan official Government of Yukon digital or paper immunization credentials";
+"View.Label.WeNeedPermission...QRcode" = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code";
 "View.action.StartScanning" = "Start scanning";
 
 "View.Label.NoCameraAccess" = "No Camera Access";

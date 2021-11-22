@@ -12,8 +12,8 @@ struct AccessibilityLabels {
     struct OnBoarding {
         static let onboardingView = "On Boarding View"
         static let startScanningButton = "Allow Camera Access" // Constants.Strings.onBoarding.buttonTitle
-        static let title = "BC Vaccine Card Verifier" // Constants.Strings.onBoarding.title
-        static let subtitle = "Businesses can scan official digital or paper BC vaccine cards" // Constants.Strings.onBoarding.subtitle
+        static let title = "Yukon Vaccination Verifier" // Constants.Strings.onBoarding.title
+        static let subtitle = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code" // Constants.Strings.onBoarding.subtitle
         static let phoneImage = "Phone Image"
     }
     
@@ -25,7 +25,7 @@ struct AccessibilityLabels {
     
     struct ScanResultView {
         static let view = "Immunization staus"
-        static let titleLabel = "BC Vaccine Card Verifier" // Constants.Strings.vaccinationStatusHeader
-        static let scanButton = "Scan Next" // Constants.Strings.scanAgain
+        static let titleLabel = "Yukon Vaccination Verifier" // Constants.Strings.vaccinationStatusHeader
+        static let scanButton = "Scan next" // Constants.Strings.scanAgain
     }
 }
