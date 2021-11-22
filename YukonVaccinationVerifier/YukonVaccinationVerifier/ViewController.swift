@@ -323,7 +323,7 @@ class ViewController: UIViewController {
         
         // Add Business Guidance Links
         
-        BusinessGuidance.setupView(in: self, links: [BusinessGuidanceLink(title: "COVID-19 information", url: "https://yukon.ca/en/covid-19-information"), BusinessGuidanceLink(title: "Data collection notice", url: nil)])
+        BusinessGuidanceViewBuilder.setupView(in: self, links: [BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: "COVID-19 information", url: "https://yukon.ca/en/covid-19-information"), BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: "Data collection notice", url: nil)])
     }
 }
 

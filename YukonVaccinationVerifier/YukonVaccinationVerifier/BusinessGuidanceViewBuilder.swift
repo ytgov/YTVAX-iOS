@@ -1,5 +1,5 @@
 //
-//  BusinessGuidanceView.swift
+//  BusinessGuidanceViewBuilder.swift
 //  YukonVaccinationVerifier
 //
 //  Created by Mohamed Fawzy on 16/11/2021.
@@ -9,14 +9,17 @@ import Foundation
 import UIKit
 import SafariServices
 
-class BusinessGuidance {
+/**
+ This class builds the view required as a business guidance and insert it at the bottom of its presenter view
+ */
+final class BusinessGuidanceViewBuilder {
     
     static func setupView(in presenter: UIViewController, links: [BusinessGuidanceLink]) {
         guard let view = presenter.view else {
             return
         }
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor(hexString: "#244C5A")
+        backgroundView.backgroundColor = Constants.UI.Theme.primaryColor
         view.addSubview(backgroundView)
         allignView(backgroundView,containerView: view, topMargin: nil, height: 85)
         let stackView = UIStackView()
@@ -33,13 +36,34 @@ class BusinessGuidance {
                     return
                 }
                 let safariViewController = SFSafariViewController(url: url)
-            presenter.present(safariViewController, animated: true)
+                presenter.present(safariViewController, animated: true)
             }
             stackView.addArrangedSubview(button)
         }
     }
     
-    private static func allignView(_ view: UIView, containerView: UIView, topMargin: CGFloat? = 0, leadingMargin: CGFloat? = 0, bottomMargin: CGFloat? = 0, trailingMargin: CGFloat? = 0, height: CGFloat? = nil) {
+    private static func buttonLink(title: String) -> UIButton {
+        let range = (title as NSString).range(of: title)
+        let attributedString = NSMutableAttributedString(string: title)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: range)
+        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSNumber(value: NSUnderlineStyle.single.rawValue), range: range)
+        attributedString.addAttribute(NSAttributedString.Key.underlineColor, value: UIColor.white, range: range)
+        let button = UIButton()
+        button.setTitle(title, for: .normal)
+        button.setAttributedTitle(attributedString, for: .normal)
+        return button
+    }
+    
+    struct BusinessGuidanceLink {
+        var title: String
+        var url: String?
+    }
+    
+}
+
+extension BusinessGuidanceViewBuilder {
+    
+    static func allignView(_ view: UIView, containerView: UIView, topMargin: CGFloat? = 0, leadingMargin: CGFloat? = 0, bottomMargin: CGFloat? = 0, trailingMargin: CGFloat? = 0, height: CGFloat? = nil) {
         if let topMargin = topMargin {
             NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1, constant: topMargin).isActive = true
         }
@@ -58,21 +82,4 @@ class BusinessGuidance {
         }
     }
     
-    private static func buttonLink(title: String) -> UIButton {
-        let range = (title as NSString).range(of: title)
-        let attributedString = NSMutableAttributedString(string: title)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.white, range: range)
-        attributedString.addAttribute(NSAttributedString.Key.underlineStyle, value: NSNumber(value: NSUnderlineStyle.single.rawValue), range: range)
-        attributedString.addAttribute(NSAttributedString.Key.underlineColor, value: UIColor.white, range: range)
-        let button = UIButton()
-        button.setTitle(title, for: .normal)
-        button.setAttributedTitle(attributedString, for: .normal)
-        return button
-    }
-    
-}
-
-struct BusinessGuidanceLink {
-    var title: String
-    var url: String?
 }

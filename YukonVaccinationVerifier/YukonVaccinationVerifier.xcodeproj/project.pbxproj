@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5BD65E3A27446FD100B4D63D /* BusinessGuidanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD65E3927446FD000B4D63D /* BusinessGuidanceView.swift */; };
+		5BD65E3A27446FD100B4D63D /* BusinessGuidanceViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */; };
 		5BD65E3C2744705500B4D63D /* UIControl+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD65E3B2744705500B4D63D /* UIControl+AddAction.swift */; };
 		7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */; };
 		F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A241D27303BA4003331F9 /* AppDelegate.swift */; };
@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD65E3927446FD000B4D63D /* BusinessGuidanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessGuidanceView.swift; sourceTree = "<group>"; };
+		5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessGuidanceViewBuilder.swift; sourceTree = "<group>"; };
 		5BD65E3B2744705500B4D63D /* UIControl+AddAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+AddAction.swift"; sourceTree = "<group>"; };
 		75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.debug.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.debug.xcconfig"; sourceTree = "<group>"; };
 		D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.release.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */,
 				F9ACC7C527317190004B9380 /* UpdateManager.swift */,
 				F9ACC7BE27315B76004B9380 /* ViewController.swift */,
-				5BD65E3927446FD000B4D63D /* BusinessGuidanceView.swift */,
+				5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */,
 			);
 			path = YukonVaccinationVerifier;
 			sourceTree = "<group>";
@@ -326,7 +326,7 @@
 				F9ACC7B927315962004B9380 /* Date.swift in Sources */,
 				F9ACC7B227315927004B9380 /* AccessibilityConstants.swift in Sources */,
 				5BD65E3C2744705500B4D63D /* UIControl+AddAction.swift in Sources */,
-				5BD65E3A27446FD100B4D63D /* BusinessGuidanceView.swift in Sources */,
+				5BD65E3A27446FD100B4D63D /* BusinessGuidanceViewBuilder.swift in Sources */,
 				F9ACC7BC27315962004B9380 /* String.swift in Sources */,
 				F9ACC7BD27315962004B9380 /* UIViewController.swift in Sources */,
 				F9ACC7BA27315962004B9380 /* UIView.swift in Sources */,
