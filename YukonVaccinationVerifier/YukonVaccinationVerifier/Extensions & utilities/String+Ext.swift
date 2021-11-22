@@ -9,8 +9,7 @@ import Foundation
 
 internal extension String {
     static let yukonVaccinationVerifier = NSLocalizedString("View.Label.YukonVaccinationVerifier", comment: "")
-    static let businessesCanScan_Credentials = NSLocalizedString("View.Label.BusinessesCanScan...credentials", comment: "")
-    
+    static let weNeedPermission_QRcode = NSLocalizedString("View.Label.WeNeedPermission...QRcode", comment: "")
     static let startScanning = NSLocalizedString("View.action.StartScanning", comment: "")
     
     static let noCameraAccess = NSLocalizedString("View.Label.NoCameraAccess", comment: "")

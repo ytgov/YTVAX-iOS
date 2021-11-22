@@ -31,6 +31,7 @@
 		F9ACC7CA273179DC004B9380 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9ACC7CC273179DC004B9380 /* Localizable.strings */; };
 		F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CD27317B84004B9380 /* String+Ext.swift */; };
 		F9ACC7D027317C8C004B9380 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */; };
+		F9BBC99E274C4C8C005F511A /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BBC99D274C4C8C005F511A /* NunitoSans-Regular.ttf */; };
 		F9FB64602731920600E4C44D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FB645F2731920600E4C44D /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		F9ACC7CB273179DC004B9380 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F9ACC7CD27317B84004B9380 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
+		F9BBC99D274C4C8C005F511A /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
 		F9FB645F2731920600E4C44D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		F96A24312730440C003331F9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F9BBC99C274C4C8C005F511A /* NunitoSans */,
 				F96A243227304419003331F9 /* Montserrat */,
 			);
 			path = Fonts;
@@ -191,6 +194,14 @@
 				F9ACC7CC273179DC004B9380 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		F9BBC99C274C4C8C005F511A /* NunitoSans */ = {
+			isa = PBXGroup;
+			children = (
+				F9BBC99D274C4C8C005F511A /* NunitoSans-Regular.ttf */,
+			);
+			path = NunitoSans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 				F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */,
 				F96A242727303BA7003331F9 /* Assets.xcassets in Resources */,
 				F9ACC7CA273179DC004B9380 /* Localizable.strings in Resources */,
+				F9BBC99E274C4C8C005F511A /* NunitoSans-Regular.ttf in Resources */,
 				F9FB64602731920600E4C44D /* Colors.xcassets in Resources */,
 				F96A2439273044F2003331F9 /* Montserrat-Bold.ttf in Resources */,
 				F96A242527303BA4003331F9 /* Main.storyboard in Resources */,
@@ -484,7 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = Z593J8PD3M;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
