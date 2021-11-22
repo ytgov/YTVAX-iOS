@@ -13,7 +13,7 @@ struct AccessibilityLabels {
         static let onboardingView = "On Boarding View"
         static let startScanningButton = "Allow Camera Access" // Constants.Strings.onBoarding.buttonTitle
         static let title = "Yukon Vaccination Verifier" // Constants.Strings.onBoarding.title
-        static let subtitle = "Use this service to scan an official government-issued QR code" // Constants.Strings.onBoarding.subtitle
+        static let subtitle = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code" // Constants.Strings.onBoarding.subtitle
         static let phoneImage = "Phone Image"
     }
     

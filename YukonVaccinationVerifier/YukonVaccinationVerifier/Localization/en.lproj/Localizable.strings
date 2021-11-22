@@ -7,7 +7,7 @@
 */
 
 "View.Label.YukonVaccinationVerifier" = "Yukon Vaccination Verifier";
-"View.Label.UseThis...QRcode" = "Use this service to scan an official government-issued QR code";
+"View.Label.WeNeedPermission...QRcode" = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code";
 "View.action.StartScanning" = "Start scanning";
 
 "View.Label.NoCameraAccess" = "No Camera Access";
