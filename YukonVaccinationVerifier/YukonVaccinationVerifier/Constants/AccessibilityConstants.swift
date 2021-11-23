@@ -49,29 +49,37 @@ internal struct Accessibility {
     
     struct OnBoarding {
         static var onboardingView: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.onboardingView") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.onboardingView")
+        }
         static var startScanningButton: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.allowCameraAccess") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.allowCameraAccess")
+        }
         static var title: String { .yukonVaccinationVerifier }
         static var subtitle: String { .weNeedPermission_QRcode }
         static var phoneImage: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.phoneImage") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.phoneImage")
+        }
     }
     
     struct scannerView {
         static var cameraView: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.cameraScreen") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.cameraScreen")
+        }
         static var turnOnFlash: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOnTorchLight") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOnTorchLight")
+        }
         static var turnOffFlash: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOffTorchLight") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOffTorchLight")
+        }
         static var switchLanguage: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.switchLanguage") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.switchLanguage")
+        }
     }
     
     struct ScanResultView {
         static var view: String {
-            LanguageService.dynamicLocalizedString("Accessibility.Label.immunizationStatus") }
+            LanguageService.dynamicLocalizedString("Accessibility.Label.immunizationStatus")
+        }
         static var titleLabel: String { .yukonVaccinationVerifier }
         static var scanButton: String { .scanNext }
     }
