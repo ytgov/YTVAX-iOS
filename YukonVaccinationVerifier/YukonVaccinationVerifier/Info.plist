@@ -31,6 +31,7 @@
 		<string>Montserrat-Italic.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-Medium.ttf</string>
+		<string>NunitoSans-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

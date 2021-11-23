@@ -16,7 +16,15 @@ internal extension UIFont {
         case bold = "Montserrat-Bold"
     }
     
+    enum SecondaryThemeStyle: String {
+        case regular = "NunitoSans-Regular"
+    }
+    
     static func themeFont(size: CGFloat, style: ThemeStyle = .regular) -> UIFont {
+        UIFont(name: style.rawValue, size: size) ?? UIFont.systemFont(ofSize: size)
+    }
+    
+    static func secondaryThemeFont(size: CGFloat, style: SecondaryThemeStyle = .regular) -> UIFont {
         UIFont(name: style.rawValue, size: size) ?? UIFont.systemFont(ofSize: size)
     }
 }

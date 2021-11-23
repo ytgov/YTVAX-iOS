@@ -123,9 +123,8 @@ struct Constants {
             static var title: String { .yukonVaccinationVerifier }
             static var subtitle: String { .weNeedPermission_QRcode }
             static var buttonTitle: String { .startScanning }
-            
             static let titleFont: UIFont = .themeFont(size: 20, style: .bold)
-            static let subtitleFont: UIFont = .themeFont(size: 16, style: .regular)
+            static let subtitleFont: UIFont = .secondaryThemeFont(size: 15, style: .regular)
             static let buttonFont: UIFont = .themeFont(size: 16, style: .regular)
             
             static let titleColor = UIColor(named: "titleColor")
