@@ -27,13 +27,13 @@
 "View.Error.Please...SupportsVideoCapture" = "Please use a device that supports video capture.";
 "View.Error.YourDevice...scanning" = "Your device does not support QR code scanning.";
 
-"Accessibility.Label.languageSelectionView" = "Language selection view";
+"Accessibility.Label.languageSelectionView" = "Language selection screen";
 "Accessibility.Label.yukonLogo" = "Government of Yukon logo";
 "Accessibility.Label.vaccinationVerifier" = "Vaccination verifier";
 "Accessibility.Label.appIcon" = "App icon";
 "Accessibility.Label.englishButton" = "English button";
 "Accessibility.Label.frenchButton" = "French button";
-"Accessibility.Label.onboardingView" = "Onboarding view";
+"Accessibility.Label.onboardingView" = "Onboarding screen";
 "Accessibility.Label.allowCameraAccess" = "Allow camera access";
 "Accessibility.Label.phoneImage" = "Phone image";
 "Accessibility.Label.cameraScreen" = "Camera screen";
