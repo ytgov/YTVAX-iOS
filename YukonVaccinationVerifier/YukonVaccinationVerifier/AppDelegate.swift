@@ -13,8 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        BCVaccineValidator.shared.setup(mode: .Prod)
+        LanguageService.prepareDefaultLocaleBundle()
+        BCVaccineValidator.shared.setup(mode: .Test)
         return true
+    }
+    
+    // Orientation supported only in iPad
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if let topViewController = UIViewController.topViewController() {
+            return topViewController.supportedInterfaceOrientations
+        } else {
+            return .portrait
+        }
     }
 }

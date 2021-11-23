@@ -9,8 +9,8 @@ import UIKit
 import AVFoundation
 import BCVaccineValidator
 
-class ViewController: UIViewController {
-    
+/// The core screen that provides the camera interface to scan QR codes.
+internal final class ViewController: BaseViewController {
     // MARK: Constants
     private let flashOnIcon = UIImage(named: "flashOn")
     private let flashOffIcon = UIImage(named: "flashOff")
@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     // MARK: Variables
     private var captureSession: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer?
+    private var isFlashLightOn: Bool {
+        (view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton)?.imageView?.image == flashOnIcon
+    }
     fileprivate var codeHighlightTags: [Int] = []
     fileprivate var invalidScannedCodes: [String] = []
     
@@ -34,18 +37,20 @@ class ViewController: UIViewController {
         return true
     }
     
-    // Lock in portrait mode
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
-        case .pad:
-            return [.portrait, .portraitUpsideDown, .landscape]
-        case .phone:
-            return .portrait
-        case .tv:
-            return .portrait
-        default:
-            return .portrait
+    override func localizeUI() {
+        if let onBoarding = view.viewWithTag(Constants.UI.onBoarding.tag) as? OnBoardingView {
+            onBoarding.updateTexts()
+            onBoarding.updateAccessibilityLabels()
         }
+        previewLayer?.accessibilityLabel = Accessibility.scannerView.cameraView
+        view.accessibilityLabel = Accessibility.scannerView.cameraView
+        let torchButton = view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton
+        torchButton?.accessibilityLabel = isFlashLightOn ? Accessibility.scannerView.turnOffFlash
+                : Accessibility.scannerView.turnOnFlash
+        
+        let langSwitchCntrVw = view.viewWithTag(Constants.UI.LanguageControlView.tag) as? UIStackView
+        let langSwitch = langSwitchCntrVw?.arrangedSubviews.first(where: { $0 is UISwitch }) as? UISwitch
+        langSwitch?.accessibilityLabel = Accessibility.scannerView.switchLanguage
     }
     
     enum Segues: String {
@@ -104,6 +109,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.setupCaptureSession()
             self.addFlashlightButton()
+            self.addLanguageControlView()
             UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
                 guard let `self` = self else {return}
                 self.view.layoutIfNeeded()
@@ -341,6 +347,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         if let existingFlashButton = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
             existingFlashButton.removeFromSuperview()
         }
+        
+        if let langControlVw = self.view.viewWithTag(Constants.UI.LanguageControlView.tag) {
+            langControlVw.removeFromSuperview()
+        }
     }
     // MARK: Setup
     private func setupCaptureSession() {
@@ -386,10 +396,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         preview.frame = self.view.layer.bounds
         preview.videoGravity = .resizeAspectFill
         preview.isAccessibilityElement = true
-        preview.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        preview.accessibilityLabel = Accessibility.scannerView.cameraView
         
         self.view.layer.addSublayer(preview)
-        self.view.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        self.view.accessibilityLabel = Accessibility.scannerView.cameraView
         self.previewLayer = preview
         
         // Begin Capture Session
@@ -558,10 +568,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
         if on {
             btn.setImage(flashOnIcon, for: .normal)
-            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOffFlash
+            btn.accessibilityLabel = Accessibility.scannerView.turnOffFlash
         } else {
             btn.setImage(flashOffIcon, for: .normal)
-            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
+            btn.accessibilityLabel = Accessibility.scannerView.turnOnFlash
         }
     }
     
@@ -584,7 +594,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         button.backgroundColor = .lightGray
         button.setImage(flashOffIcon, for: .normal)
-        button.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
+        button.accessibilityLabel = Accessibility.scannerView.turnOnFlash
         
         button.addTarget(self, action: #selector(flashTapped), for: .touchUpInside)
         button.layer.cornerRadius = btnSize/2
@@ -592,14 +602,56 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.imageView?.contentMode = .scaleAspectFit
     }
     
-    @objc func flashTapped(sender: UIButton?) {
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
-            return
+    fileprivate func addLanguageControlView() {
+        if let existing = self.view.viewWithTag(Constants.UI.LanguageControlView.tag) {
+            existing.removeFromSuperview()
         }
-        let isOn = btn.imageView?.image == flashOnIcon
-        setFlash(on: !isOn)
+        
+        let hStack = UIStackView()
+        hStack.axis = .horizontal
+        hStack.spacing = 15
+        hStack.translatesAutoresizingMaskIntoConstraints = false
+        hStack.tag = Constants.UI.LanguageControlView.tag
+        
+        let enLbl = UILabel()
+        enLbl.font = .themeFont(size: 18, style: .medium)
+        enLbl.textColor = Constants.UI.Theme.primaryConstractColor
+        enLbl.text = Constants.SupportedLanguageCode.en.rawValue.capitalized
+        
+        let langSwitch = UISwitch()
+        langSwitch.onTintColor = .clear
+        langSwitch.tintColor = Constants.UI.Theme.primaryConstractColor.withAlphaComponent(0.5)
+        langSwitch.thumbTintColor = Constants.UI.Theme.primaryConstractColor
+        langSwitch.backgroundColor = Constants.UI.Theme.primaryConstractColor.withAlphaComponent(0.5)
+        langSwitch.layer.cornerRadius = 16
+        
+        langSwitch.isOn = LanguageService.languageCode == .fr_CA
+        langSwitch.isAccessibilityElement = true
+        langSwitch.accessibilityTraits = .button
+        langSwitch.accessibilityLabel = Accessibility.scannerView.switchLanguage
+        langSwitch.addTarget(self, action: #selector(langSwitchTapped), for: .valueChanged)
+        
+        let frLbl = UILabel()
+        frLbl.font = .themeFont(size: 18, style: .medium)
+        frLbl.textColor = Constants.UI.Theme.primaryConstractColor
+        frLbl.text = Constants.SupportedLanguageCode.fr_CA.rawValue.capitalized
+        
+        hStack.addArrangedSubview(enLbl)
+        hStack.addArrangedSubview(langSwitch)
+        hStack.addArrangedSubview(frLbl)
+        
+        view.addSubview(hStack)
+        hStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 38).isActive = true
+        hStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     }
     
+    @objc func flashTapped(sender: UIButton?) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        setFlash(on: !isFlashLightOn)
+    }
     
+    @objc func langSwitchTapped(sender: UISwitch) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        LanguageService.switchTo(sender.isOn ? .fr_CA : .en)
+    }
 }
