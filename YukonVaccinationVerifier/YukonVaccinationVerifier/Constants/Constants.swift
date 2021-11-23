@@ -121,7 +121,7 @@ struct Constants {
         struct onBoarding {
             static let tag = 3124145
             static var title: String { .yukonVaccinationVerifier }
-            static var subtitle: String { .useThis_QRcode }
+            static var subtitle: String { .weNeedPermission_QRcode }
             static var buttonTitle: String { .startScanning }
             
             static let titleFont: UIFont = .themeFont(size: 20, style: .bold)

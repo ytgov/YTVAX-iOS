@@ -6,30 +6,27 @@
   
 */
 
-"View.Label.YukonVaccinationVerifier" = "FR - Yukon Vaccination Verifier";
-"View.Label.UseThis...QRcode" = "FR - Use this service to scan an official government-issued QR code";
+"View.Label.YukonVaccinationVerifier" = "Yukon Vaccination Verifier";
+"View.Label.WeNeedPermission...QRcode" = "Vous devez autoriser l’application à accéder à votre caméra pour pouvoir lire un code QR officiel";
 "View.Label.NoCameraAccess" = "FR - No Camera Access";
 "View.Label.Camera...UseThisApp" = "FR - Camera access is necessary to use this app.";
-"View.Label.FullyVaccinated" = "FR - Fully vaccinated";
-"View.Label.OfficialGovernmentOfYukonResult" = "FR - Official Government of Yukon result";
-"View.Label.PartiallyVaccinated" = "FR - Partially vaccinated";
+"View.Label.FullyVaccinated" = "Pleinement vacciné";
+"View.Label.OfficialGovernmentOfYukonResult" = "Résultat officiel du gouvernement du Yukon";
+"View.Label.PartiallyVaccinated" = "Partiellement vacciné";
 "View.Label.NoRecordsFound" = "FR - No Records Found";
 "View.Label.PleaseUpdate" = "FR - Please Update";
 "View.Label.ANewVersion...AppStore" = "FR - A new version of this app is available on the app store";
-
-"View.Action.StartScanning" = "FR - Start scanning";
-"View.Action.Ok" = "FR - Ok";
-"View.Action.ScanNext" = "FR - Scan next";
-
-"View.Error.There...codesInView" = "FR - There are multiple QR codes in view";
-"View.Error.InvalidQRCode" = "FR - Invalid QR Code";
-"View.Error.UnsupportedDevice" = "FR - Unsupported Device";
-"View.Error.Please...SupportsVideoCapture" = "FR - Please use a device that supports video capture.";
-"View.Error.YourDevice...scanning" = "FR - Your device does not support QR code scanning.";
-
+"View.Action.StartScanning" = "Commencer la lecture";
+"View.Action.Ok" = "Ok";
+"View.Action.ScanNext" = "Prochain code QR";
+"View.Error.There...codesInView" = "Plusieurs codes QR détectés";
+"View.Error.InvalidQRCode" = "Code QR invalide";
+"View.Error.UnsupportedDevice" = "Appareil non pris en charge";
+"View.Error.Please...SupportsVideoCapture" = "Utilisez un appareil qui prend en charge la capture vidéo.";
+"View.Error.YourDevice...scanning" = "Votre appareil ne prend pas en charge la lecture des codes QR.";
 "Accessibility.Label.languageSelectionView" = "FR - Language selection view";
 "Accessibility.Label.yukonLogo" = "FR - Government of Yukon logo";
-"Accessibility.Label.vaccinationVerifier" = "FR - Vaccination verifier";
+"Accessibility.Label.vaccinationVerifier" = "Vaccination verifier";
 "Accessibility.Label.appIcon" = "FR - App icon";
 "Accessibility.Label.englishButton" = "FR - English button";
 "Accessibility.Label.frenchButton" = "FR - French button";
@@ -41,6 +38,5 @@
 "Accessibility.Label.turnOffTorchLight" = "FR - Turn off torch light";
 "Accessibility.Label.switchLanguage" = "FR - Switch language";
 "Accessibility.Label.immunizationStatus" = "FR - Immunization status";
-
 "Accessibility.Value.englishButton" = "FR - Selects English";
 "Accessibility.Value.frenchButton" = "FR - Selects French";

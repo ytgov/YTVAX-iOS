@@ -37,18 +37,17 @@ internal final class LanguageService {
     }
     
     static func dynamicLocalizedString(_ key: String) -> String {
-        let localizedString: String
+        var localizedString = key
         if let bundle = localeBundle {
             localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
-        } else {
-            localizedString = NSLocalizedString(key, comment: "")
         }
-        return localizedString
+        return localizedString == key ? NSLocalizedString(key, comment: "") : localizedString
     }
     
     static func dynamicLocalizedString(_ key: String, code: Constants.SupportedLanguageCode) -> String {
         if let bundle = bundle(code: code) {
-            return NSLocalizedString(key, bundle: bundle, comment: "")
+            let val = NSLocalizedString(key, bundle: bundle, comment: "")
+            return val == key ? dynamicLocalizedString(key) : val
         } else {
             return dynamicLocalizedString(key)
         }

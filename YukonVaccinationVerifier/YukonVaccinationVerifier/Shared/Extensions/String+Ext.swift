@@ -9,7 +9,7 @@ import Foundation
 
 internal extension String {
     static var yukonVaccinationVerifier: String { LanguageService.dynamicLocalizedString("View.Label.YukonVaccinationVerifier") }
-    static var useThis_QRcode: String { LanguageService.dynamicLocalizedString("View.Label.UseThis...QRcode") }
+    static var weNeedPermission_QRcode: String { LanguageService.dynamicLocalizedString("View.Label.WeNeedPermission...QRcode") }
     static var noCameraAccess: String { LanguageService.dynamicLocalizedString("View.Label.NoCameraAccess") }
     static var camera_UseThisApp: String { LanguageService.dynamicLocalizedString("View.Label.Camera...UseThisApp") }
     static var fullyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.FullyVaccinated") }

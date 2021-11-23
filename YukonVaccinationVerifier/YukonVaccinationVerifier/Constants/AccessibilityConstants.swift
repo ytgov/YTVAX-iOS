@@ -53,7 +53,7 @@ internal struct Accessibility {
         static var startScanningButton: String {
             LanguageService.dynamicLocalizedString("Accessibility.Label.allowCameraAccess") }
         static var title: String { .yukonVaccinationVerifier }
-        static var subtitle: String { .useThis_QRcode }
+        static var subtitle: String { .weNeedPermission_QRcode }
         static var phoneImage: String {
             LanguageService.dynamicLocalizedString("Accessibility.Label.phoneImage") }
     }

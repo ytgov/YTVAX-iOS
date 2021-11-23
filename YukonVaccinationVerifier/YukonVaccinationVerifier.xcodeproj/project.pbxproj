@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */; };
+		F94F438E274D3A4000296A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F94F4390274D3A4000296A49 /* InfoPlist.strings */; };
 		F95B6F4F274684E7007D62D9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F4E274684E7007D62D9 /* Logger.swift */; };
 		F95B6F522746854B007D62D9 /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F502746854B007D62D9 /* String+Constants.swift */; };
 		F95B6F532746854B007D62D9 /* ReactiveVarBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F512746854B007D62D9 /* ReactiveVarBox.swift */; };
@@ -53,6 +54,8 @@
 		75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.debug.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.debug.xcconfig"; sourceTree = "<group>"; };
 		D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.release.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.release.xcconfig"; sourceTree = "<group>"; };
 		F91773F42749D065009F6FAB /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F94F438F274D3A4000296A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F94F4391274D3A4500296A49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F95B6F4E274684E7007D62D9 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F95B6F502746854B007D62D9 /* String+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
 		F95B6F512746854B007D62D9 /* ReactiveVarBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveVarBox.swift; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				F9ACC7CC273179DC004B9380 /* Localizable.strings */,
+				F94F4390274D3A4000296A49 /* InfoPlist.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -337,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96A242A27303BA7003331F9 /* LaunchScreen.storyboard in Resources */,
+				F94F438E274D3A4000296A49 /* InfoPlist.strings in Resources */,
 				F9ACC7AD273158E0004B9380 /* OnBoardingView.xib in Resources */,
 				F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */,
 				F96A242727303BA7003331F9 /* Assets.xcassets in Resources */,
@@ -432,6 +437,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F94F4390274D3A4000296A49 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F94F438F274D3A4000296A49 /* en */,
+				F94F4391274D3A4500296A49 /* fr-CA */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F96A242327303BA4003331F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
