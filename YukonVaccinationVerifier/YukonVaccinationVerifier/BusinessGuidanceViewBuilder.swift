@@ -32,7 +32,7 @@ final class BusinessGuidanceViewBuilder {
         for link in links {
             let button  = newLinkButton(title: link.title)
             button.addAction {
-                guard let urlString = link.url, let url = URL(string: urlString) else {
+                guard let url = URL(string: link.url) else {
                     return
                 }
                 let safariViewController = SFSafariViewController(url: url)
@@ -55,7 +55,7 @@ final class BusinessGuidanceViewBuilder {
     
     struct BusinessGuidanceLink {
         var title: String
-        var url: String?
+        var url: String
     }
     
 }
