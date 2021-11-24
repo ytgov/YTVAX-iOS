@@ -21,12 +21,12 @@ final class BusinessGuidanceViewBuilder {
         let backgroundView = UIView()
         backgroundView.backgroundColor = Constants.UI.Theme.primaryColor
         view.addSubview(backgroundView)
-        allignView(backgroundView,containerView: view, topMargin: nil, height: 85)
+        backgroundView.allignTo(containerView: view, topMargin: nil, height: 85)
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 10
         backgroundView.addSubview(stackView)
-        allignView(stackView, containerView: backgroundView, topMargin: 10, bottomMargin: nil)
+        stackView.allignTo(containerView: backgroundView, topMargin: 10, bottomMargin: nil)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for link in links {
@@ -60,25 +60,3 @@ final class BusinessGuidanceViewBuilder {
     
 }
 
-extension BusinessGuidanceViewBuilder {
-    
-    static func allignView(_ view: UIView, containerView: UIView, topMargin: CGFloat? = 0, leadingMargin: CGFloat? = 0, bottomMargin: CGFloat? = 0, trailingMargin: CGFloat? = 0, height: CGFloat? = nil) {
-        if let topMargin = topMargin {
-            NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1, constant: topMargin).isActive = true
-        }
-        if let leadingMargin = leadingMargin {
-            NSLayoutConstraint(item: view, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: leadingMargin).isActive = true
-        }
-        if let leadingMargin = leadingMargin {
-            NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: leadingMargin).isActive = true
-        }
-        if let bottomMargin = bottomMargin {
-            NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1, constant: bottomMargin).isActive = true
-        }
-        if let height = height {
-            let height = height + containerView.safeAreaInsets.bottom
-            NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: height).isActive = true
-        }
-    }
-    
-}
