@@ -30,7 +30,7 @@ final class BusinessGuidanceViewBuilder {
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for link in links {
-            let button  = buttonLink(title: link.title)
+            let button  = newLinkButton(title: link.title)
             button.addAction {
                 guard let urlString = link.url, let url = URL(string: urlString) else {
                     return
@@ -42,7 +42,7 @@ final class BusinessGuidanceViewBuilder {
         }
     }
     
-    private static func buttonLink(title: String) -> UIButton {
+    private static func newLinkButton(title: String) -> UIButton {
         let range = (title as NSString).range(of: title)
         let attributedString = NSMutableAttributedString(string: title)
         let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: NSNumber(value: NSUnderlineStyle.single.rawValue), NSAttributedString.Key.underlineColor: UIColor.white]
