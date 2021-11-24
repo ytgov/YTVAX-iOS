@@ -18,15 +18,21 @@ final class BusinessGuidanceViewBuilder {
         guard let view = presenter.view else {
             return
         }
+        let tag = Constants.UI.BusinessGuidanceView.tag
+        if let existingView = view.viewWithTag(tag) {
+            existingView.removeFromSuperview()
+        }
         let backgroundView = UIView()
+        backgroundView.tag = tag
         backgroundView.backgroundColor = Constants.UI.Theme.primaryColor
         view.addSubview(backgroundView)
-        backgroundView.allignTo(containerView: view, topMargin: nil, height: 85)
+        backgroundView.allignTo(containerView: view, topMargin: nil, height: Constants.UI.BusinessGuidanceView.height)
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 10
+        let spacing = Constants.UI.BusinessGuidanceView.spacing
+        stackView.spacing = spacing
         backgroundView.addSubview(stackView)
-        stackView.allignTo(containerView: backgroundView, topMargin: 10, bottomMargin: nil)
+        stackView.allignTo(containerView: backgroundView, topMargin: spacing, bottomMargin: nil)
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for link in links {

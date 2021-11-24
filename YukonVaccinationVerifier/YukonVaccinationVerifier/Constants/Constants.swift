@@ -218,5 +218,12 @@ struct Constants {
             static let labelPadding: CGFloat = 8
             static let containerPadding: CGFloat = 16
         }
+        
+        struct BusinessGuidanceView {
+            static let tag = 67886788
+            static let spacing: CGFloat = 10
+            static let height: CGFloat = 85
+        }
+        
     }
 }
