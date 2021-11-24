@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  YukonVaccinationVerifier
+
+  Created by Mohamed Afsar on 23/11/21.
+  
+*/
+
+NSCameraUsageDescription = "Vous devez autoriser l’application à accéder à votre caméra pour pouvoir lire un code QR officiel.";

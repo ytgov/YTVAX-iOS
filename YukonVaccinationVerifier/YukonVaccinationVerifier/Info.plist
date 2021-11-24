@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>We need permission to access your camera to be able to scan QR codes.</string>
+	<string>We need permission to access your camera to be able to use this service to scan an official government-issued QR code.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Bold.ttf</string>
@@ -31,6 +31,7 @@
 		<string>Montserrat-Italic.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 		<string>Montserrat-Medium.ttf</string>
+		<string>NunitoSans-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

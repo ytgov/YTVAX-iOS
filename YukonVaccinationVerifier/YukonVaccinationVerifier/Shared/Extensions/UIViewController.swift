@@ -5,11 +5,9 @@
 //  Created by Amir Shayegh on 2021-08-27.
 //
 
-import Foundation
 import UIKit
 
-extension UIViewController {
-    
+internal extension UIViewController {
     func alert(title: String?, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: String.ok, style: .default))
@@ -97,6 +95,29 @@ extension UIViewController {
         } completion: { done in
             banner.removeFromSuperview()
         }
-
+    }
+    
+    class func topViewController(controller: UIViewController? = {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
+        } else {
+            return UIApplication.shared.keyWindow?.rootViewController
+        }
+    }()) -> UIViewController? {
+        
+        if let navigationController = controller as? UINavigationController {
+            if let visible = navigationController.visibleViewController {
+                return topViewController(controller: visible)
+            }
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
     }
 }

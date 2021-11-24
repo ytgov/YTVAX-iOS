@@ -7,25 +7,80 @@
 
 import Foundation
 
-struct AccessibilityLabels {
+/// Contains info needed to configure accessibility
+internal struct Accessibility {
+    enum LanguageSelectionView: String {
+        case languageSelectionView
+        case yukonLogo
+        case vaccinationVerifier
+        case appIcon
+        case selectALanguage
+        case sélectionnezUneLangue
+        case englishButton
+        case frenchButton
+        
+        var identifier: String { self .rawValue }
+        
+        var label: String? {
+            switch self {
+            case .selectALanguage, .sélectionnezUneLangue:
+                return nil
+            default:
+                let key = "Accessibility.Label.\(self.rawValue)" // NO I18N
+                let label = LanguageService.dynamicLocalizedString(key)
+                return key == label ? nil : label
+            }
+        }
+        
+        var value: String? {
+            let key = "Accessibility.Value.\(self.rawValue)" // NO I18N
+            let val: String
+            switch self {
+            case .englishButton:
+                val = LanguageService.dynamicLocalizedString(key, code: .en)
+            case .frenchButton:
+                val = LanguageService.dynamicLocalizedString(key, code: .fr_CA)
+            default:
+                val = LanguageService.dynamicLocalizedString(key)
+            }
+            return key == val ? nil : val
+        }
+    }
     
     struct OnBoarding {
-        static let onboardingView = "On Boarding View"
-        static let startScanningButton = "Allow Camera Access" // Constants.Strings.onBoarding.buttonTitle
-        static let title = "BC Vaccine Card Verifier" // Constants.Strings.onBoarding.title
-        static let subtitle = "Businesses can scan official digital or paper BC vaccine cards" // Constants.Strings.onBoarding.subtitle
-        static let phoneImage = "Phone Image"
+        static var onboardingView: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.onboardingView")
+        }
+        static var startScanningButton: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.allowCameraAccess")
+        }
+        static var title: String { .yukonVaccinationVerifier }
+        static var subtitle: String { .weNeedPermission_QRcode }
+        static var phoneImage: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.phoneImage")
+        }
     }
     
     struct scannerView {
-        static let cameraView = "Camera Screen"
-        static let turnOnFlash = "Turn on torch light"
-        static let turnOffFlash = "Turn off torch light"
+        static var cameraView: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.cameraScreen")
+        }
+        static var turnOnFlash: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOnTorchLight")
+        }
+        static var turnOffFlash: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.turnOffTorchLight")
+        }
+        static var switchLanguage: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.switchLanguage")
+        }
     }
     
     struct ScanResultView {
-        static let view = "Immunization staus"
-        static let titleLabel = "BC Vaccine Card Verifier" // Constants.Strings.vaccinationStatusHeader
-        static let scanButton = "Scan Next" // Constants.Strings.scanAgain
+        static var view: String {
+            LanguageService.dynamicLocalizedString("Accessibility.Label.immunizationStatus")
+        }
+        static var titleLabel: String { .yukonVaccinationVerifier }
+        static var scanButton: String { .scanNext }
     }
 }

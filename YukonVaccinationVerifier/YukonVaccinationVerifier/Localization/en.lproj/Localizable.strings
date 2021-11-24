@@ -7,20 +7,41 @@
 */
 
 "View.Label.YukonVaccinationVerifier" = "Yukon Vaccination Verifier";
-"View.Label.BusinessesCanScan...credentials" = "Businesses can scan official Government of Yukon digital or paper immunization credentials";
-"View.action.StartScanning" = "Start scanning";
-
+"View.Label.WeNeedPermission...QRcode" = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code";
 "View.Label.NoCameraAccess" = "No Camera Access";
 "View.Label.Camera...UseThisApp" = "Camera access is necessary to use this app.";
-
-"View.Label.Ok" = "Ok";
-
 "View.Label.FullyVaccinated" = "Fully vaccinated";
 "View.Label.OfficialGovernmentOfYukonResult" = "Official Government of Yukon result";
 "View.Label.PartiallyVaccinated" = "Partially vaccinated";
 "View.Label.NoRecordsFound" = "No Records Found";
-
-"View.action.ScanNext" = "Scan next";
-
 "View.Label.PleaseUpdate" = "Please Update";
 "View.Label.ANewVersion...AppStore" = "A new version of this app is available on the app store";
+
+"View.Action.StartScanning" = "Start scanning";
+"View.Action.Ok" = "Ok";
+"View.Action.ScanNext" = "Scan next";
+
+"View.Error.There...codesInView" = "There are multiple QR codes in view";
+"View.Error.InvalidQRCode" = "Invalid QR Code";
+"View.Error.scanOfficialQR" ="Please scan an official government-issued QR code";
+"View.Error.UnsupportedDevice" = "Unsupported Device";
+"View.Error.Please...SupportsVideoCapture" = "Please use a device that supports video capture.";
+"View.Error.YourDevice...scanning" = "Your device does not support QR code scanning.";
+
+"Accessibility.Label.languageSelectionView" = "Language selection screen";
+"Accessibility.Label.yukonLogo" = "Government of Yukon logo";
+"Accessibility.Label.vaccinationVerifier" = "Vaccination verifier";
+"Accessibility.Label.appIcon" = "App icon";
+"Accessibility.Label.englishButton" = "English button";
+"Accessibility.Label.frenchButton" = "French button";
+"Accessibility.Label.onboardingView" = "Onboarding screen";
+"Accessibility.Label.allowCameraAccess" = "Allow camera access";
+"Accessibility.Label.phoneImage" = "Phone image";
+"Accessibility.Label.cameraScreen" = "Camera screen";
+"Accessibility.Label.turnOnTorchLight" = "Turn on torch light";
+"Accessibility.Label.turnOffTorchLight" = "Turn off torch light";
+"Accessibility.Label.switchLanguage" = "Switch language";
+"Accessibility.Label.immunizationStatus" = "Immunization status";
+
+"Accessibility.Value.englishButton" = "Selects English";
+"Accessibility.Value.frenchButton" = "Selects French";
