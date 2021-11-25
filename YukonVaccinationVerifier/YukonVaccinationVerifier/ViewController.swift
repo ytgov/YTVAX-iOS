@@ -329,7 +329,7 @@ internal final class ViewController: BaseViewController {
         
         // Add Business Guidance Links
         
-        BusinessGuidanceViewBuilder.setupView(in: self, links: [BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: "COVID-19 information", url: "https://yukon.ca/en/covid-19-information"), BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: "Data collection notice", url: "https://yukon.ca/en/yukon-vaccination-verifier-app-privacy-policy")])
+        BusinessGuidanceViewBuilder.setupView(in: self, links: [BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .COVIDInfoTitle, url: .covidInfoURL), BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .dataCollectionTitle, url: .dataCollectionURL)])
     }
 }
 

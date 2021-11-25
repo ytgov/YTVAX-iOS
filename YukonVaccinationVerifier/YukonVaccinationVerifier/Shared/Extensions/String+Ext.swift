@@ -28,6 +28,12 @@ internal extension String {
     }
     static var aNewVersion_AppStore: String { LanguageService.dynamicLocalizedString("View.Label.ANewVersion...AppStore")
     }
+    static var COVIDInfoTitle: String {
+        LanguageService.dynamicLocalizedString("View.Label.CovidInfo")
+    }
+    static var dataCollectionTitle: String {
+        LanguageService.dynamicLocalizedString("View.Label.DataCollectionNotice")
+    }
     
     static var startScanning: String { LanguageService.dynamicLocalizedString("View.Action.StartScanning")
     }
@@ -36,6 +42,14 @@ internal extension String {
     }
     static var scanNext: String {
         LanguageService.dynamicLocalizedString("View.Action.ScanNext")
+    }
+    
+    static var covidInfoURL: String {
+        LanguageService.dynamicLocalizedString("View.URL.Covid19Info")
+    }
+    
+    static var dataCollectionURL: String {
+        LanguageService.dynamicLocalizedString("View.URL.DataCollection")
     }
     
     static var there_codesInView: String {

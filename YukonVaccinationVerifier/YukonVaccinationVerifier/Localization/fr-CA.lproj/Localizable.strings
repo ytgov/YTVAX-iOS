@@ -16,11 +16,18 @@
 "View.Label.NoRecordsFound" = "Aucun dossier trouvé";
 "View.Label.PleaseUpdate" = "Veuillez mettre à jour.";
 "View.Label.ANewVersion...AppStore" = "Nouvelle version téléchargeable à partir du magasin d’applications";
+"View.Label.CovidInfo" = "Informations COVID-19";
+"View.Label.DataCollectionNotice" = "Avis de collecte de données";
 "View.Action.StartScanning" = "Commencer la lecture";
 "View.Action.Ok" = "Ok";
 "View.Action.ScanNext" = "Prochain code QR";
+
+"View.URL.Covid19Info" = "https://yukon.ca/fr/covid-19-information";
+"View.URL.DataCollection" = "https://yukon.ca/fr/yukon-vaccination-verifier-app-privacy-policy";
+
 "View.Error.There...codesInView" = "Plusieurs codes QR détectés";
 "View.Error.InvalidQRCode" = "Code QR invalide";
+"View.Error.scanOfficialQR" = "Veuillez scanner un QR code officiel émis par le gouvernement";
 "View.Error.UnsupportedDevice" = "Appareil non pris en charge";
 "View.Error.Please...SupportsVideoCapture" = "Utilisez un appareil qui prend en charge la capture vidéo.";
 "View.Error.YourDevice...scanning" = "Votre appareil ne prend pas en charge la lecture des codes QR.";

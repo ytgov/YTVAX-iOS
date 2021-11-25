@@ -16,10 +16,15 @@
 "View.Label.NoRecordsFound" = "No Records Found";
 "View.Label.PleaseUpdate" = "Please Update";
 "View.Label.ANewVersion...AppStore" = "A new version of this app is available on the app store";
+"View.Label.CovidInfo" = "COVID-19 information";
+"View.Label.DataCollectionNotice" = "Data collection notice";
 
 "View.Action.StartScanning" = "Start scanning";
 "View.Action.Ok" = "Ok";
 "View.Action.ScanNext" = "Scan next";
+
+"View.URL.Covid19Info" = "https://yukon.ca/en/covid-19-information";
+"View.URL.DataCollection" = "https://yukon.ca/en/yukon-vaccination-verifier-app-privacy-policy";
 
 "View.Error.There...codesInView" = "There are multiple QR codes in view";
 "View.Error.InvalidQRCode" = "Invalid QR Code";
