@@ -21,6 +21,12 @@ internal final class ViewController: BaseViewController {
     private var isFlashLightOn: Bool {
         (view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton)?.imageView?.image == flashOnIcon
     }
+    private var bannerBottomPadding: CGFloat {
+        if let existingView = view.viewWithTag(Constants.UI.BusinessGuidanceView.tag) {
+            return existingView.frame.height
+        }
+        return 0
+    }
     fileprivate var codeHighlightTags: [Int] = []
     fileprivate var invalidScannedCodes: [String] = []
     
@@ -38,10 +44,10 @@ internal final class ViewController: BaseViewController {
     }
     
     override func localizeUI() {
-        if let onBoarding = view.viewWithTag(Constants.UI.onBoarding.tag) as? OnBoardingView {
-            onBoarding.updateTexts()
-            onBoarding.updateAccessibilityLabels()
-        }
+        let onBoarding = view.viewWithTag(Constants.UI.onBoarding.tag) as? OnBoardingView
+        onBoarding?.updateTexts()
+        onBoarding?.updateAccessibilityLabels()
+        
         previewLayer?.accessibilityLabel = Accessibility.scannerView.cameraView
         view.accessibilityLabel = Accessibility.scannerView.cameraView
         let torchButton = view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton
@@ -51,6 +57,10 @@ internal final class ViewController: BaseViewController {
         let langSwitchCntrVw = view.viewWithTag(Constants.UI.LanguageControlView.tag) as? UIStackView
         let langSwitch = langSwitchCntrVw?.arrangedSubviews.first(where: { $0 is UISwitch }) as? UISwitch
         langSwitch?.accessibilityLabel = Accessibility.scannerView.switchLanguage
+     
+        if view.viewWithTag(Constants.UI.BusinessGuidanceView.tag) != nil {
+            addOrUpdateBusinessGuidanceView()
+        }
     }
     
     enum Segues: String {
@@ -101,17 +111,21 @@ internal final class ViewController: BaseViewController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { [weak self](context) in
             guard let `self` = self, self.isCameraUsageAuthorized() else { return }
-            self.reStartCamera()
+            self.reStartCamera(shouldAnimate: true)
         })
     }
     
-    private func reStartCamera() {
+    private func reStartCamera(shouldAnimate: Bool) {
         DispatchQueue.main.async {
             self.setupCaptureSession()
             self.addFlashlightButton()
             self.addLanguageControlView()
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
-                guard let `self` = self else {return}
+            if shouldAnimate {
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
+                    guard let `self` = self else {return}
+                    self.view.layoutIfNeeded()
+                }
+            } else {
                 self.view.layoutIfNeeded()
             }
         }
@@ -146,7 +160,7 @@ internal final class ViewController: BaseViewController {
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
                     if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
-                        self.reStartCamera()
+                        self.reStartCamera(shouldAnimate: true)
                     } else {
                         self.startCamera()
                     }
@@ -177,7 +191,7 @@ internal final class ViewController: BaseViewController {
         if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
             onBoarding.removeFromSuperview()
         }
-        self.reStartCamera()
+        self.reStartCamera(shouldAnimate: false)
     }
     
     func showOnboarding() {
@@ -326,6 +340,13 @@ internal final class ViewController: BaseViewController {
         view.addSubview(logoImageView)
         
         logoImageView.image = UIImage(named: "onCameraLogo")
+        
+        // Add Business Guidance Links
+        addOrUpdateBusinessGuidanceView()
+    }
+    
+    private func addOrUpdateBusinessGuidanceView() {
+        BusinessGuidanceViewBuilder.setupView(in: self, links: [BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .covidInfoTitle, url: .covidInfoURL), BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .dataCollectionTitle, url: .dataCollectionURL)])
     }
 }
 
@@ -455,9 +476,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
             // Validate QR code
             validate(code: stringValue)
-        } else {
+        } else {            
             // Show message
-            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+            showBanner(message: Constants.Strings.Errors.InvalidCode.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: bannerBottomPadding, trailing: 0))
+            
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
         }
@@ -478,12 +500,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     switch result.status {
                     case .ValidCode:
                         break
-                    case .InvalidCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .ForgedCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .MissingData:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                    case .InvalidCode, .ForgedCode, .MissingData:
+                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: self.bannerBottomPadding, trailing: 0))
                     }
                     self.startCamera()
                     self.invalidScannedCodes.append(code)
@@ -511,7 +529,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         for (index, item) in metadataObjects.enumerated() {
             showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
         }
-        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message)
+        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: bannerBottomPadding, trailing: 0))
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
@@ -616,7 +634,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         let enLbl = UILabel()
         enLbl.font = .themeFont(size: 18, style: .medium)
         enLbl.textColor = Constants.UI.Theme.primaryConstractColor
-        enLbl.text = Constants.SupportedLanguageCode.en.rawValue.capitalized
+        enLbl.text = Constants.SupportedLanguageCode.en.label.capitalized
         
         let langSwitch = UISwitch()
         langSwitch.onTintColor = .clear
@@ -634,7 +652,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         let frLbl = UILabel()
         frLbl.font = .themeFont(size: 18, style: .medium)
         frLbl.textColor = Constants.UI.Theme.primaryConstractColor
-        frLbl.text = Constants.SupportedLanguageCode.fr_CA.rawValue.capitalized
+        frLbl.text = Constants.SupportedLanguageCode.fr_CA.label.capitalized
         
         hStack.addArrangedSubview(enLbl)
         hStack.addArrangedSubview(langSwitch)

@@ -61,6 +61,17 @@ extension UIView {
     public class func fromNib<T: UIView>(bundle: Bundle? = Bundle.main) -> T {
         return bundle!.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }
+    
+    public func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+        layer.masksToBounds = false
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offSet
+        layer.shadowRadius = radius
+
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
 }
 
 extension UIView {
@@ -86,4 +97,27 @@ extension UIView {
         }
         self.layer.addSublayer(shapeLayer)
     }
+}
+
+extension UIView {
+    
+    func allignTo(containerView: UIView, topMargin: CGFloat? = 0, leadingMargin: CGFloat? = 0, bottomMargin: CGFloat? = 0, trailingMargin: CGFloat? = 0, height: CGFloat? = nil) {
+        if let topMargin = topMargin {
+            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal, toItem: containerView, attribute: .top, multiplier: 1, constant: topMargin).isActive = true
+        }
+        if let leadingMargin = leadingMargin {
+            NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal, toItem: containerView, attribute: .leading, multiplier: 1, constant: leadingMargin).isActive = true
+        }
+        if let leadingMargin = leadingMargin {
+            NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: leadingMargin).isActive = true
+        }
+        if let bottomMargin = bottomMargin {
+            NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: containerView, attribute: .bottom, multiplier: 1, constant: bottomMargin).isActive = true
+        }
+        if let height = height {
+            let height = height + containerView.safeAreaInsets.bottom
+            NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: height).isActive = true
+        }
+    }
+    
 }
