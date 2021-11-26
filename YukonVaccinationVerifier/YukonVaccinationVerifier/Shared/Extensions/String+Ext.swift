@@ -28,7 +28,7 @@ internal extension String {
     }
     static var aNewVersion_AppStore: String { LanguageService.dynamicLocalizedString("View.Label.ANewVersion...AppStore")
     }
-    static var COVIDInfoTitle: String {
+    static var covidInfoTitle: String {
         LanguageService.dynamicLocalizedString("View.Label.CovidInfo")
     }
     static var dataCollectionTitle: String {
@@ -57,9 +57,6 @@ internal extension String {
     }
     static var invalidQRCode: String {
         LanguageService.dynamicLocalizedString("View.Error.InvalidQRCode")
-    }
-    static var scanOfficialQR: String {
-        LanguageService.dynamicLocalizedString("View.Error.scanOfficialQR")
     }
     static var unsupportedDevice: String {
         LanguageService.dynamicLocalizedString("View.Error.UnsupportedDevice")

@@ -51,7 +51,7 @@ final class BusinessGuidanceViewBuilder {
     private static func newLinkButton(title: String) -> UIButton {
         let range = (title as NSString).range(of: title)
         let attributedString = NSMutableAttributedString(string: title)
-        let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.underlineStyle: NSNumber(value: NSUnderlineStyle.single.rawValue), NSAttributedString.Key.underlineColor: UIColor.white]
+        let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.white, .underlineStyle: NSNumber(value: NSUnderlineStyle.single.rawValue), .underlineColor: UIColor.white, .font: UIFont.secondaryThemeFont(size: 13, style: .regular)]
         attributedString.addAttributes(attributes, range: range)
         let button = UIButton()
         button.setTitle(title, for: .normal)

@@ -28,7 +28,6 @@
 
 "View.Error.There...codesInView" = "There are multiple QR codes in view";
 "View.Error.InvalidQRCode" = "Invalid QR Code";
-"View.Error.scanOfficialQR" ="Please scan an official government-issued QR code";
 "View.Error.UnsupportedDevice" = "Unsupported Device";
 "View.Error.Please...SupportsVideoCapture" = "Please use a device that supports video capture.";
 "View.Error.YourDevice...scanning" = "Your device does not support QR code scanning.";

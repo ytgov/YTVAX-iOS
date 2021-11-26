@@ -38,8 +38,7 @@ struct Constants {
                 static var message: String { .there_codesInView }
             }
             struct InvalidCode {
-                static var title: String { .invalidQRCode }
-                static var message: String { .scanOfficialQR }
+                static var message: String { .invalidQRCode }
             }
             struct VideoNotSupported {
                 static var title: String { .unsupportedDevice }
@@ -224,8 +223,8 @@ struct Constants {
         
         struct BusinessGuidanceView {
             static let tag = 67886788
-            static let spacing: CGFloat = 10
-            static let height: CGFloat = 85
+            static let spacing: CGFloat = 5
+            static let height: CGFloat = 60
         }
         
     }
@@ -233,6 +232,13 @@ struct Constants {
     enum SupportedLanguageCode: String {
         case en
         case fr_CA = "fr-CA" // NO I18N
+        
+        var label: String {
+            switch self {
+            case .en: return self.rawValue
+            case .fr_CA: return "fr"
+            }
+        }
     }
     
     struct Key {
