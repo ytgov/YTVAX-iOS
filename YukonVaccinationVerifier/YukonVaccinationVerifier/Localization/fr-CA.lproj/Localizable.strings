@@ -23,7 +23,7 @@
 "View.Action.ScanNext" = "Code QR suivant";
 
 "View.URL.Covid19Info" = "https://yukon.ca/fr/covid-19-information";
-"View.URL.DataCollection" = "https://yukon.ca/fr/yukon-vaccination-verifier-app-privacy-policy";
+"View.URL.DataCollection" = "https://yukon.ca/fr/appli-vaccination-politique-protection-renseignements-personnels";
 
 "View.Error.There...codesInView" = "Plusieurs codes QR détectés";
 "View.Error.InvalidQRCode" = "Code QR invalide";
