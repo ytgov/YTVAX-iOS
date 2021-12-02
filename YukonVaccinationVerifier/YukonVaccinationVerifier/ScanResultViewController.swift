@@ -8,8 +8,8 @@
 import UIKit
 import BCVaccineValidator
 
-class ScanResultViewController: UIViewController {
-
+/// Shows the result of the scanned QR code(Fully/Partically/Not vaccinated). 
+internal final class ScanResultViewController: BaseViewController {
     // MARK: Outlets
     @IBOutlet weak var scanButton: UIButton!
     
@@ -31,19 +31,6 @@ class ScanResultViewController: UIViewController {
     
     private var timer: Timer?
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
-        case .pad:
-            return [.portrait, .portraitUpsideDown, .landscape]
-        case .phone:
-            return .portrait
-        case .tv:
-            return .portrait
-        default:
-            return .portrait
-        }
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -52,14 +39,18 @@ class ScanResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         style()
-        setData()
-        setupAccessibilityTags()
+        updateTextsAndAccessibilityTags()
+        setupAccessibility()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setData()
+        updateVaccinationData()
         beginAutoDismissTimer()
+    }
+    
+    override func localizeUI() {
+        updateTextsAndAccessibilityTags()
     }
     
     // MARK: Outlet Actions
@@ -80,7 +71,7 @@ class ScanResultViewController: UIViewController {
         self.model = model
     }
     
-    private func setData() {
+    private func updateVaccinationData() {
         guard let model = self.model else {return}
         nameLabel.text = model.name.uppercased()
         switch model.status {
@@ -105,10 +96,6 @@ class ScanResultViewController: UIViewController {
     
     // MARK: Style
     private func style() {
-        // Strings
-        scanButton.setTitle(Constants.Strings.scanAgain, for: .normal)
-        titleLabel.text = Constants.Strings.vaccinationStatusHeader
-        
         // Colours
         view.backgroundColor = Constants.UI.Theme.primaryColor
         titleLabel.textColor = Constants.UI.Theme.primaryConstractColor
@@ -131,6 +118,17 @@ class ScanResultViewController: UIViewController {
         if let btnLabel = scanButton.titleLabel {
             btnLabel.font = Constants.UI.ScanResult.buttonFont
         }
+    }
+    
+    private func updateTextsAndAccessibilityTags() {
+        scanButton.setTitle(Constants.Strings.scanAgain, for: .normal)
+        titleLabel.text = Constants.Strings.vaccinationStatusHeader
+        
+        view.accessibilityLabel = Accessibility.ScanResultView.view
+        titleLabel.accessibilityLabel = Accessibility.ScanResultView.titleLabel
+        scanButton.accessibilityLabel = Accessibility.ScanResultView.scanButton
+        
+        updateVaccinationData()
     }
     
     private func styleStatusCard(foregroundColor: UIColor) {
@@ -181,15 +179,12 @@ class ScanResultViewController: UIViewController {
         statusCardContainer.addDashedBorder(color: UIColor.black.cgColor, width: 6)
     }
     
-    func setupAccessibilityTags() {
+    func setupAccessibility() {
         view.accessibilityTraits = .allowsDirectInteraction
-        view.accessibilityLabel = AccessibilityLabels.ScanResultView.view
+        
         cardTitle.accessibilityTraits = .allowsDirectInteraction
         scanButton.accessibilityTraits = .allowsDirectInteraction
         nameLabel.accessibilityTraits = .allowsDirectInteraction
-        
-        titleLabel.accessibilityLabel = AccessibilityLabels.ScanResultView.titleLabel
-        scanButton.accessibilityLabel = AccessibilityLabels.ScanResultView.scanButton
         
         cardIcon.isAccessibilityElement = false
         cardIcon.accessibilityTraits = .notEnabled
@@ -199,7 +194,5 @@ class ScanResultViewController: UIViewController {
         
         divider.isAccessibilityElement = false
         divider.accessibilityTraits = .notEnabled
-        
     }
-
 }

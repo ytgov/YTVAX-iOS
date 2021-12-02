@@ -5,10 +5,9 @@
 //  Created by Amir Shayegh on 2021-08-27.
 //
 
-import Foundation
 import UIKit
 
-extension UIViewController {
+internal extension UIViewController {
     func alert(title: String, message: String) {
         let controller = UIAlertController(title: title, message: message, preferredStyle: .alert)
         controller.addAction(UIAlertAction(title: String.ok, style: .default))
@@ -27,7 +26,7 @@ extension UIViewController {
         }
     }
     
-    func showBanner(message: String) {
+    func showBanner(message: String, padding: NSDirectionalEdgeInsets = .zero) {
         // padding Constants
         let textPadding: CGFloat = Constants.UI.Banner.labelPadding
         let containerPadding: CGFloat = Constants.UI.Banner.containerPadding
@@ -50,9 +49,9 @@ extension UIViewController {
         
         // Position container
         container.translatesAutoresizingMaskIntoConstraints = false
-        container.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0 - containerPadding).isActive = true
-        container.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: containerPadding).isActive = true
-        container.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0 - containerPadding).isActive = true
+        container.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -(containerPadding + padding.bottom)).isActive = true
+        container.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: containerPadding + padding.leading).isActive = true
+        container.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -(containerPadding + padding.trailing)).isActive = true
         let messageHeight = message.heightForView(font: Constants.UI.Banner.labelFont, width: container.bounds.width)
         container.heightAnchor.constraint(equalToConstant: messageHeight + (textPadding * 2)).isActive = true
         
@@ -71,6 +70,7 @@ extension UIViewController {
         label.textColor = Constants.UI.Banner.labelColor
         container.backgroundColor = Constants.UI.Banner.backgroundColor
         container.layer.cornerRadius = Constants.UI.Theme.cornerRadius
+        container.dropShadow(color: Constants.UI.Theme.primaryConstractColor, offSet: .zero)
         
         // Remove banner after x seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + Constants.UI.Banner.displayDuration) {[weak self] in
@@ -96,6 +96,29 @@ extension UIViewController {
         } completion: { done in
             banner.removeFromSuperview()
         }
-
+    }
+    
+    class func topViewController(controller: UIViewController? = {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController
+        } else {
+            return UIApplication.shared.keyWindow?.rootViewController
+        }
+    }()) -> UIViewController? {
+        
+        if let navigationController = controller as? UINavigationController {
+            if let visible = navigationController.visibleViewController {
+                return topViewController(controller: visible)
+            }
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return topViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return topViewController(controller: presented)
+        }
+        return controller
     }
 }

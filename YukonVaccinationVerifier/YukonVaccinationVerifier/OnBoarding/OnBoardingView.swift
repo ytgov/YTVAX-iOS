@@ -7,11 +7,13 @@
 
 import UIKit
 
-class OnBoardingView: UIView {
+/// Shows basic info of the app and asks for Camera permisions
+internal final class OnBoardingView: UIView {
     
     var buttonCallback: (()->Void)?
 
     // MARK: Outlets
+    @IBOutlet weak var phoneImgVw: UIImageView!
     @IBOutlet weak var onBoardTitle: UILabel!
     @IBOutlet weak var onBoardSubtitle: UILabel!
     @IBOutlet weak var onBoardContainer: UIView!
@@ -29,7 +31,8 @@ class OnBoardingView: UIView {
         self.addEqualSizeContraints(to: container)
         self.buttonCallback = onButtonTap
         style()
-        setupAccessibilityTags()
+        updateTexts()
+        updateAccessibilityLabels()
         container.layoutIfNeeded()
         UIView.animate(withDuration: 0.4, delay: 1, options: .curveEaseIn) {[weak self] in
             guard let `self` = self else {return}
@@ -43,27 +46,38 @@ class OnBoardingView: UIView {
         callback()
     }
     
-    func setupAccessibilityTags() {
-        onBoardContainer.accessibilityLabel = AccessibilityLabels.OnBoarding.onboardingView
-        onBoardButton.accessibilityLabel = AccessibilityLabels.OnBoarding.startScanningButton
-        onBoardTitle.accessibilityLabel = AccessibilityLabels.OnBoarding.title
-        onBoardSubtitle.accessibilityLabel = AccessibilityLabels.OnBoarding.subtitle
-        onBoardImage.accessibilityLabel = AccessibilityLabels.OnBoarding.phoneImage
+    func updateAccessibilityLabels() {
+        onBoardContainer.accessibilityLabel = Accessibility.OnBoarding.onboardingView
+        
+        phoneImgVw.isAccessibilityElement = true
+        onBoardButton.isAccessibilityElement = true
+        onBoardTitle.isAccessibilityElement = true
+        onBoardSubtitle.isAccessibilityElement = true
+        
+        onBoardButton.accessibilityLabel = Accessibility.OnBoarding.startScanningButton
+        onBoardTitle.accessibilityLabel = Accessibility.OnBoarding.title
+        onBoardSubtitle.accessibilityLabel = Accessibility.OnBoarding.subtitle
+        phoneImgVw.accessibilityLabel = Accessibility.OnBoarding.phoneImage
+        
+        phoneImgVw.accessibilityTraits = .none
     }
     
     func style() {
-        onBoardTitle.text = Constants.UI.onBoarding.title
         onBoardTitle.font = Constants.UI.onBoarding.titleFont
         onBoardTitle.textColor = Constants.UI.onBoarding.titleColor
-        onBoardSubtitle.text = Constants.UI.onBoarding.subtitle
         onBoardSubtitle.textColor = Constants.UI.onBoarding.subtitleColor
         onBoardSubtitle.font = Constants.UI.onBoarding.subtitleFont
-        onBoardButton.setTitle(Constants.UI.onBoarding.buttonTitle, for: .normal)
         onBoardButton.backgroundColor = Constants.UI.onBoarding.buttonBgColor
         onBoardButton.setTitleColor(Constants.UI.Theme.primaryConstractColor, for: .normal)
         onBoardButton.layer.cornerRadius = Constants.UI.Theme.cornerRadius
         if let titleLabel = onBoardButton.titleLabel {
             titleLabel.font = Constants.UI.onBoarding.buttonFont
         }
+    }
+    
+    func updateTexts() {
+        onBoardTitle.text = Constants.UI.onBoarding.title
+        onBoardSubtitle.text = Constants.UI.onBoarding.subtitle
+        onBoardButton.setTitle(Constants.UI.onBoarding.buttonTitle, for: .normal)
     }
 }

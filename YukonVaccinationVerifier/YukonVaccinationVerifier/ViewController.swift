@@ -9,7 +9,15 @@ import UIKit
 import AVFoundation
 import BCVaccineValidator
 
-class ViewController: UIViewController {
+/// The core screen that provides the camera interface to scan QR codes.
+internal final class ViewController: BaseViewController {
+    // MARK: Internal IVars
+    internal var launchScreenExtension = Constants.launchScreenExtension
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var govLogoImgVw: UIImageView!
+    @IBOutlet weak var appLogoImgVw: UIImageView!
+    @IBOutlet weak var appNameLbl: UILabel!
     
     // MARK: Constants
     private let flashOnIcon = UIImage(named: "flashOn")
@@ -18,6 +26,15 @@ class ViewController: UIViewController {
     // MARK: Variables
     private var captureSession: AVCaptureSession?
     private var previewLayer: AVCaptureVideoPreviewLayer?
+    private var isFlashLightOn: Bool {
+        (view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton)?.imageView?.image == flashOnIcon
+    }
+    private var bannerBottomPadding: CGFloat {
+        if let existingView = view.viewWithTag(Constants.UI.BusinessGuidanceView.tag) {
+            return existingView.frame.height
+        }
+        return 0
+    }
     fileprivate var codeHighlightTags: [Int] = []
     fileprivate var invalidScannedCodes: [String] = []
     
@@ -34,17 +51,23 @@ class ViewController: UIViewController {
         return true
     }
     
-    // Lock in portrait mode
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        switch (UIScreen.main.traitCollection.userInterfaceIdiom) {
-        case .pad:
-            return [.portrait, .portraitUpsideDown, .landscape]
-        case .phone:
-            return .portrait
-        case .tv:
-            return .portrait
-        default:
-            return .portrait
+    override func localizeUI() {
+        let onBoarding = view.viewWithTag(Constants.UI.onBoarding.tag) as? OnBoardingView
+        onBoarding?.updateTexts()
+        onBoarding?.updateAccessibilityLabels()
+        
+        previewLayer?.accessibilityLabel = Accessibility.scannerView.cameraView
+        view.accessibilityLabel = Accessibility.scannerView.cameraView
+        let torchButton = view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton
+        torchButton?.accessibilityLabel = isFlashLightOn ? Accessibility.scannerView.turnOffFlash
+                : Accessibility.scannerView.turnOnFlash
+        
+        let langSwitchCntrVw = view.viewWithTag(Constants.UI.LanguageControlView.tag) as? UIStackView
+        let langSwitch = langSwitchCntrVw?.arrangedSubviews.first(where: { $0 is UISwitch }) as? UISwitch
+        langSwitch?.accessibilityLabel = Accessibility.scannerView.switchLanguage
+     
+        if view.viewWithTag(Constants.UI.BusinessGuidanceView.tag) != nil {
+            addOrUpdateBusinessGuidanceView()
         }
     }
     
@@ -62,7 +85,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
-        showCameraOrOnboarding()
+        showCameraOrOnboarding(launchScreenExtension: launchScreenExtension)
         Notification.Name.keysUpdated.onPost(object: nil, queue: .main) { [weak self] _ in
             guard let `self` = self else {return}
             self.invalidScannedCodes.removeAll()
@@ -96,16 +119,21 @@ class ViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         coordinator.animate(alongsideTransition: { [weak self](context) in
             guard let `self` = self, self.isCameraUsageAuthorized() else { return }
-            self.reStartCamera()
+            self.reStartCamera(shouldAnimate: true)
         })
     }
     
-    private func reStartCamera() {
+    private func reStartCamera(shouldAnimate: Bool) {
         DispatchQueue.main.async {
             self.setupCaptureSession()
             self.addFlashlightButton()
-            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
-                guard let `self` = self else {return}
+            self.addLanguageControlView()
+            if shouldAnimate {
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn) { [weak self] in
+                    guard let `self` = self else {return}
+                    self.view.layoutIfNeeded()
+                }
+            } else {
                 self.view.layoutIfNeeded()
             }
         }
@@ -140,7 +168,7 @@ class ViewController: UIViewController {
                 destination.dismiss(animated: true, completion: { [weak self] in
                     guard let `self` = self else {return}
                     if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
-                        self.reStartCamera()
+                        self.reStartCamera(shouldAnimate: true)
                     } else {
                         self.startCamera()
                     }
@@ -150,14 +178,27 @@ class ViewController: UIViewController {
     }
     
     // MARK: Class Functions
-    func showCameraOrOnboarding() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenExtension) { [weak self] in
-            guard let `self` = self else {return}
+    func showCameraOrOnboarding(launchScreenExtension: Double) {
+        let showCamOrOnboarding = {
             if self.isCameraUsageAuthorized() {
                 self.showCamera()
             } else {
                 self.showOnboarding()
             }
+        }
+        if launchScreenExtension > 0 {
+            govLogoImgVw.isHidden = false
+            appLogoImgVw.isHidden = false
+            appNameLbl.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + launchScreenExtension) { [weak self] in
+                guard let _ = self else { return }
+                showCamOrOnboarding()
+            }
+        } else {
+            govLogoImgVw.isHidden = true
+            appLogoImgVw.isHidden = true
+            appNameLbl.isHidden = true
+            showCamOrOnboarding()
         }
     }
     
@@ -171,7 +212,7 @@ class ViewController: UIViewController {
         if let onBoarding = self.view.viewWithTag(Constants.UI.onBoarding.tag) {
             onBoarding.removeFromSuperview()
         }
-        self.reStartCamera()
+        self.reStartCamera(shouldAnimate: false)
     }
     
     func showOnboarding() {
@@ -196,7 +237,7 @@ class ViewController: UIViewController {
         } else if status == .denied {
             self.alertCameraAccessIsNecessary()
         } else {
-            showCameraOrOnboarding()
+            showCameraOrOnboarding(launchScreenExtension: 0)
         }
     }
     
@@ -320,6 +361,13 @@ class ViewController: UIViewController {
         view.addSubview(logoImageView)
         
         logoImageView.image = UIImage(named: "onCameraLogo")
+        
+        // Add Business Guidance Links
+        addOrUpdateBusinessGuidanceView()
+    }
+    
+    private func addOrUpdateBusinessGuidanceView() {
+        BusinessGuidanceViewBuilder.setupView(in: self, links: [BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .covidInfoTitle, url: .covidInfoURL), BusinessGuidanceViewBuilder.BusinessGuidanceLink(title: .dataCollectionTitle, url: .dataCollectionURL)])
     }
 }
 
@@ -340,6 +388,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         
         if let existingFlashButton = self.view.viewWithTag(Constants.UI.TorchButton.tag) {
             existingFlashButton.removeFromSuperview()
+        }
+        
+        if let langControlVw = self.view.viewWithTag(Constants.UI.LanguageControlView.tag) {
+            langControlVw.removeFromSuperview()
         }
     }
     // MARK: Setup
@@ -386,10 +438,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         preview.frame = self.view.layer.bounds
         preview.videoGravity = .resizeAspectFill
         preview.isAccessibilityElement = true
-        preview.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        preview.accessibilityLabel = Accessibility.scannerView.cameraView
         
         self.view.layer.addSublayer(preview)
-        self.view.accessibilityLabel = AccessibilityLabels.scannerView.cameraView
+        self.view.accessibilityLabel = Accessibility.scannerView.cameraView
         self.previewLayer = preview
         
         // Begin Capture Session
@@ -445,9 +497,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
             // Validate QR code
             validate(code: stringValue)
-        } else {
+        } else {            
             // Show message
-            self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+            showBanner(message: Constants.Strings.Errors.InvalidCode.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: bannerBottomPadding, trailing: 0))
+            
             // Show code location
             showQRCodeLocation(for: metadataObject, isInValid: false, tag: Constants.UI.QRCodeHighlighter.tag)
         }
@@ -468,12 +521,8 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
                     switch result.status {
                     case .ValidCode:
                         break
-                    case .InvalidCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .ForgedCode:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
-                    case .MissingData:
-                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message)
+                    case .InvalidCode, .ForgedCode, .MissingData:
+                        self.showBanner(message: Constants.Strings.Errors.InvalidCode.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: self.bannerBottomPadding, trailing: 0))
                     }
                     self.startCamera()
                     self.invalidScannedCodes.append(code)
@@ -501,7 +550,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         for (index, item) in metadataObjects.enumerated() {
             showQRCodeLocation(for: item, isInValid: true, tag: 1000 + index)
         }
-        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message)
+        showBanner(message: Constants.Strings.Errors.MultipleQRCodes.message, padding: NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: bannerBottomPadding, trailing: 0))
     }
     
     fileprivate func showQRCodeLocation(for object: AVMetadataObject, isInValid: Bool, tag: Int) {
@@ -558,10 +607,10 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
         if on {
             btn.setImage(flashOnIcon, for: .normal)
-            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOffFlash
+            btn.accessibilityLabel = Accessibility.scannerView.turnOffFlash
         } else {
             btn.setImage(flashOffIcon, for: .normal)
-            btn.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
+            btn.accessibilityLabel = Accessibility.scannerView.turnOnFlash
         }
     }
     
@@ -584,7 +633,7 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         button.backgroundColor = .lightGray
         button.setImage(flashOffIcon, for: .normal)
-        button.accessibilityLabel = AccessibilityLabels.scannerView.turnOnFlash
+        button.accessibilityLabel = Accessibility.scannerView.turnOnFlash
         
         button.addTarget(self, action: #selector(flashTapped), for: .touchUpInside)
         button.layer.cornerRadius = btnSize/2
@@ -592,14 +641,56 @@ extension ViewController: AVCaptureMetadataOutputObjectsDelegate {
         button.imageView?.contentMode = .scaleAspectFit
     }
     
-    @objc func flashTapped(sender: UIButton?) {
-        UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        guard let btn = self.view.viewWithTag(Constants.UI.TorchButton.tag) as? UIButton else {
-            return
+    fileprivate func addLanguageControlView() {
+        if let existing = self.view.viewWithTag(Constants.UI.LanguageControlView.tag) {
+            existing.removeFromSuperview()
         }
-        let isOn = btn.imageView?.image == flashOnIcon
-        setFlash(on: !isOn)
+        
+        let hStack = UIStackView()
+        hStack.axis = .horizontal
+        hStack.spacing = 15
+        hStack.translatesAutoresizingMaskIntoConstraints = false
+        hStack.tag = Constants.UI.LanguageControlView.tag
+        
+        let enLbl = UILabel()
+        enLbl.font = .themeFont(size: 18, style: .medium)
+        enLbl.textColor = Constants.UI.Theme.primaryConstractColor
+        enLbl.text = Constants.SupportedLanguageCode.en.label.capitalized
+        
+        let langSwitch = UISwitch()
+        langSwitch.onTintColor = .clear
+        langSwitch.tintColor = Constants.UI.Theme.primaryConstractColor.withAlphaComponent(0.5)
+        langSwitch.thumbTintColor = Constants.UI.Theme.primaryConstractColor
+        langSwitch.backgroundColor = Constants.UI.Theme.primaryConstractColor.withAlphaComponent(0.5)
+        langSwitch.layer.cornerRadius = 16
+        
+        langSwitch.isOn = LanguageService.languageCode == .fr_CA
+        langSwitch.isAccessibilityElement = true
+        langSwitch.accessibilityTraits = .button
+        langSwitch.accessibilityLabel = Accessibility.scannerView.switchLanguage
+        langSwitch.addTarget(self, action: #selector(langSwitchTapped), for: .valueChanged)
+        
+        let frLbl = UILabel()
+        frLbl.font = .themeFont(size: 18, style: .medium)
+        frLbl.textColor = Constants.UI.Theme.primaryConstractColor
+        frLbl.text = Constants.SupportedLanguageCode.fr_CA.label.capitalized
+        
+        hStack.addArrangedSubview(enLbl)
+        hStack.addArrangedSubview(langSwitch)
+        hStack.addArrangedSubview(frLbl)
+        
+        view.addSubview(hStack)
+        hStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 38).isActive = true
+        hStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
     }
     
+    @objc func flashTapped(sender: UIButton?) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        setFlash(on: !isFlashLightOn)
+    }
     
+    @objc func langSwitchTapped(sender: UISwitch) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        LanguageService.switchTo(sender.isOn ? .fr_CA : .en)
+    }
 }

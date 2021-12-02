@@ -7,7 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */; };
+		5BB53D27274ECD54009D42CC /* UIControl+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB53D26274ECD54009D42CC /* UIControl+AddAction.swift */; };
+		5BD65E3A27446FD100B4D63D /* BusinessGuidanceViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */; };
+		E81ADC2F83C5866DF6769E28 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410A59314CDB533664A3CA2 /* Pods_YukonVaccinationVerifier.framework */; };
+		F94F438E274D3A4000296A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F94F4390274D3A4000296A49 /* InfoPlist.strings */; };
+		F95B6F4F274684E7007D62D9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F4E274684E7007D62D9 /* Logger.swift */; };
+		F95B6F522746854B007D62D9 /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F502746854B007D62D9 /* String+Constants.swift */; };
+		F95B6F532746854B007D62D9 /* ReactiveVarBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F512746854B007D62D9 /* ReactiveVarBox.swift */; };
+		F95B6F552746887A007D62D9 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F542746887A007D62D9 /* DateFormatter+Ext.swift */; };
+		F95B6F5A27469895007D62D9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F5927469895007D62D9 /* BaseViewController.swift */; };
+		F95B6F5C27469B67007D62D9 /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F5B27469B67007D62D9 /* Notification+Names.swift */; };
+		F95B6F5E27469C34007D62D9 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F5D27469C34007D62D9 /* LanguageService.swift */; };
+		F95B6F6627469F31007D62D9 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F6527469F31007D62D9 /* UserDefault.swift */; };
+		F968AF7B2745489F00BD2759 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F968AF7A2745489F00BD2759 /* Montserrat-Medium.ttf */; };
+		F968AF7D27454FBF00BD2759 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F968AF7C27454FBF00BD2759 /* UIView+IBInspectable.swift */; };
 		F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96A241D27303BA4003331F9 /* AppDelegate.swift */; };
 		F96A242527303BA4003331F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F96A242327303BA4003331F9 /* Main.storyboard */; };
 		F96A242727303BA7003331F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F96A242627303BA7003331F9 /* Assets.xcassets */; };
@@ -16,6 +29,8 @@
 		F96A2438273044F2003331F9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */; };
 		F96A2439273044F2003331F9 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */; };
 		F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */; };
+		F989842327455666007DEFAB /* LanguageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F989842227455665007DEFAB /* LanguageSelectionVC.swift */; };
+		F9898425274556C4007DEFAB /* LanguageSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9898424274556C4007DEFAB /* LanguageSelectionViewModel.swift */; };
 		F9ACC7AC273158E0004B9380 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */; };
 		F9ACC7AD273158E0004B9380 /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9ACC7AB273158E0004B9380 /* OnBoardingView.xib */; };
 		F9ACC7B127315927004B9380 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7AF27315927004B9380 /* Constants.swift */; };
@@ -32,13 +47,33 @@
 		F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CD27317B84004B9380 /* String+Ext.swift */; };
 		F9ACC7D027317C8C004B9380 /* UIFont+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */; };
 		F9BBC99E274C4C8C005F511A /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9BBC99D274C4C8C005F511A /* NunitoSans-Regular.ttf */; };
+		F9C15A7B2747C07F004FE462 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C15A7A2747C07F004FE462 /* LandingViewController.swift */; };
+		F9C15A7D2747C0C7004FE462 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C15A7C2747C0C7004FE462 /* LandingViewModel.swift */; };
 		F9FB64602731920600E4C44D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9FB645F2731920600E4C44D /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.debug.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.debug.xcconfig"; sourceTree = "<group>"; };
-		D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.release.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.release.xcconfig"; sourceTree = "<group>"; };
+		3410A59314CDB533664A3CA2 /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4042352198704AD2696C436E /* Pods-YukonVaccinationVerifier.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.dev.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.dev.xcconfig"; sourceTree = "<group>"; };
+		489724362B65A136838C18CB /* Pods-YukonVaccinationVerifier.tst.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.tst.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.tst.xcconfig"; sourceTree = "<group>"; };
+		5BB53D26274ECD54009D42CC /* UIControl+AddAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+AddAction.swift"; path = "YukonVaccinationVerifier/Extensions & utilities/UIControl+AddAction.swift"; sourceTree = SOURCE_ROOT; };
+		5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessGuidanceViewBuilder.swift; sourceTree = "<group>"; };
+		6E16D6AE71EB2383B1D80A26 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.adhoc.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.adhoc.xcconfig"; sourceTree = "<group>"; };
+		A4BDF5459E57D9562A72A76D /* Pods-YukonVaccinationVerifier.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.prod.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.prod.xcconfig"; sourceTree = "<group>"; };
+		E63FE48DECAAB0EE587EFE85 /* Pods-YukonVaccinationVerifier.stg.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.stg.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.stg.xcconfig"; sourceTree = "<group>"; };
+		F91773F42749D065009F6FAB /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F94F438F274D3A4000296A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F94F4391274D3A4500296A49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F95B6F4E274684E7007D62D9 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F95B6F502746854B007D62D9 /* String+Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		F95B6F512746854B007D62D9 /* ReactiveVarBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveVarBox.swift; sourceTree = "<group>"; };
+		F95B6F542746887A007D62D9 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		F95B6F5927469895007D62D9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F95B6F5B27469B67007D62D9 /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
+		F95B6F5D27469C34007D62D9 /* LanguageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
+		F95B6F6527469F31007D62D9 /* UserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		F968AF7A2745489F00BD2759 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F968AF7C27454FBF00BD2759 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		F96A241A27303BA4003331F9 /* YukonVaccinationVerifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YukonVaccinationVerifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96A241D27303BA4003331F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F96A242427303BA4003331F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +84,8 @@
 		F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F989842227455665007DEFAB /* LanguageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionVC.swift; sourceTree = "<group>"; };
+		F9898424274556C4007DEFAB /* LanguageSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewModel.swift; sourceTree = "<group>"; };
 		F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		F9ACC7AB273158E0004B9380 /* OnBoardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		F9ACC7AF27315927004B9380 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -65,6 +102,8 @@
 		F9ACC7CD27317B84004B9380 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Ext.swift"; sourceTree = "<group>"; };
 		F9BBC99D274C4C8C005F511A /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		F9C15A7A2747C07F004FE462 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		F9C15A7C2747C0C7004FE462 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 		F9FB645F2731920600E4C44D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,17 +112,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7216D88C9D37BAE5F03E1672 /* Pods_YukonVaccinationVerifier.framework in Frameworks */,
+				E81ADC2F83C5866DF6769E28 /* Pods_YukonVaccinationVerifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		66974E69460EEF29B36209CE /* Frameworks */ = {
+		2AF999EEE705F0BD9409FCF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03613F478FD95623DC8943E1 /* Pods_YukonVaccinationVerifier.framework */,
+				3410A59314CDB533664A3CA2 /* Pods_YukonVaccinationVerifier.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,10 +130,42 @@
 		D89F097884C13647125BCC0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */,
-				D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */,
+				4042352198704AD2696C436E /* Pods-YukonVaccinationVerifier.dev.xcconfig */,
+				A4BDF5459E57D9562A72A76D /* Pods-YukonVaccinationVerifier.prod.xcconfig */,
+				6E16D6AE71EB2383B1D80A26 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */,
+				E63FE48DECAAB0EE587EFE85 /* Pods-YukonVaccinationVerifier.stg.xcconfig */,
+				489724362B65A136838C18CB /* Pods-YukonVaccinationVerifier.tst.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F95B6F56274697FE007D62D9 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F95B6F582746987B007D62D9 /* ViewControllers */,
+				F95B6F5727469823007D62D9 /* Utilities */,
+				F9ACC7B327315962004B9380 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F95B6F5727469823007D62D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F95B6F5D27469C34007D62D9 /* LanguageService.swift */,
+				F95B6F4E274684E7007D62D9 /* Logger.swift */,
+				F95B6F512746854B007D62D9 /* ReactiveVarBox.swift */,
+				F95B6F6527469F31007D62D9 /* UserDefault.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F95B6F582746987B007D62D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F95B6F5927469895007D62D9 /* BaseViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F96A241127303BA4003331F9 = {
@@ -103,7 +174,7 @@
 				F96A241C27303BA4003331F9 /* YukonVaccinationVerifier */,
 				F96A241B27303BA4003331F9 /* Products */,
 				D89F097884C13647125BCC0E /* Pods */,
-				66974E69460EEF29B36209CE /* Frameworks */,
+				2AF999EEE705F0BD9409FCF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,15 +194,18 @@
 				F96A242627303BA7003331F9 /* Assets.xcassets */,
 				F9FB645F2731920600E4C44D /* Colors.xcassets */,
 				F9ACC7AE27315927004B9380 /* Constants */,
-				F9ACC7B327315962004B9380 /* Extensions & utilities */,
 				F96A24312730440C003331F9 /* Fonts */,
 				F96A242827303BA7003331F9 /* LaunchScreen.storyboard */,
 				F96A242B27303BA7003331F9 /* Info.plist */,
+				F9C15A792747C05A004FE462 /* Landing */,
+				F98984212745561A007DEFAB /* LanguageSelection */,
 				F9ACC7C7273179AA004B9380 /* Localization */,
 				F9ACC7A9273158E0004B9380 /* OnBoarding */,
 				F9ACC7BF27315B76004B9380 /* ScanResultViewController.swift */,
+				F95B6F56274697FE007D62D9 /* Shared */,
 				F9ACC7C527317190004B9380 /* UpdateManager.swift */,
 				F9ACC7BE27315B76004B9380 /* ViewController.swift */,
+				5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */,
 			);
 			path = YukonVaccinationVerifier;
 			sourceTree = "<group>";
@@ -148,12 +222,22 @@
 		F96A243227304419003331F9 /* Montserrat */ = {
 			isa = PBXGroup;
 			children = (
+				F968AF7A2745489F00BD2759 /* Montserrat-Medium.ttf */,
 				F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */,
 				F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */,
 				F96A2433273044F2003331F9 /* Montserrat-Italic.ttf */,
 				F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */,
 			);
 			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		F98984212745561A007DEFAB /* LanguageSelection */ = {
+			isa = PBXGroup;
+			children = (
+				F989842227455665007DEFAB /* LanguageSelectionVC.swift */,
+				F9898424274556C4007DEFAB /* LanguageSelectionViewModel.swift */,
+			);
+			path = LanguageSelection;
 			sourceTree = "<group>";
 		};
 		F9ACC7A9273158E0004B9380 /* OnBoarding */ = {
@@ -174,24 +258,30 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		F9ACC7B327315962004B9380 /* Extensions & utilities */ = {
+		F9ACC7B327315962004B9380 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				F9ACC7B427315962004B9380 /* Date.swift */,
+				F95B6F542746887A007D62D9 /* DateFormatter+Ext.swift */,
+				F95B6F5B27469B67007D62D9 /* Notification+Names.swift */,
 				F9ACC7B727315962004B9380 /* String.swift */,
+				F95B6F502746854B007D62D9 /* String+Constants.swift */,
 				F9ACC7CD27317B84004B9380 /* String+Ext.swift */,
 				F9ACC7B527315962004B9380 /* UIView.swift */,
+				F968AF7C27454FBF00BD2759 /* UIView+IBInspectable.swift */,
 				F9ACC7B627315962004B9380 /* UIColor.swift */,
 				F9ACC7B827315962004B9380 /* UIViewController.swift */,
 				F9ACC7CF27317C8C004B9380 /* UIFont+Ext.swift */,
+				5BB53D26274ECD54009D42CC /* UIControl+AddAction.swift */,
 			);
-			path = "Extensions & utilities";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F9ACC7C7273179AA004B9380 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
 				F9ACC7CC273179DC004B9380 /* Localizable.strings */,
+				F94F4390274D3A4000296A49 /* InfoPlist.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -204,6 +294,15 @@
 			path = NunitoSans;
 			sourceTree = "<group>";
 		};
+		F9C15A792747C05A004FE462 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				F9C15A7A2747C07F004FE462 /* LandingViewController.swift */,
+				F9C15A7C2747C0C7004FE462 /* LandingViewModel.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,11 +310,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96A242E27303BA7003331F9 /* Build configuration list for PBXNativeTarget "YukonVaccinationVerifier" */;
 			buildPhases = (
-				59CB70843BB61CFFC06C31E7 /* [CP] Check Pods Manifest.lock */,
+				2210ADE9774FBA66DB726A98 /* [CP] Check Pods Manifest.lock */,
 				F96A241627303BA4003331F9 /* Sources */,
 				F96A241727303BA4003331F9 /* Frameworks */,
 				F96A241827303BA4003331F9 /* Resources */,
-				2E2A4A52C28A5802BF0F959C /* [CP] Embed Pods Frameworks */,
+				816F1C8E74CFBB3AA73BFC56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +346,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"fr-CA",
 			);
 			mainGroup = F96A241127303BA4003331F9;
 			productRefGroup = F96A241B27303BA4003331F9 /* Products */;
@@ -264,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F96A242A27303BA7003331F9 /* LaunchScreen.storyboard in Resources */,
+				F94F438E274D3A4000296A49 /* InfoPlist.strings in Resources */,
 				F9ACC7AD273158E0004B9380 /* OnBoardingView.xib in Resources */,
 				F96A243A273044F2003331F9 /* Montserrat-BoldItalic.ttf in Resources */,
 				F96A242727303BA7003331F9 /* Assets.xcassets in Resources */,
@@ -273,6 +374,7 @@
 				F96A2439273044F2003331F9 /* Montserrat-Bold.ttf in Resources */,
 				F96A242527303BA4003331F9 /* Main.storyboard in Resources */,
 				F96A2438273044F2003331F9 /* Montserrat-Regular.ttf in Resources */,
+				F968AF7B2745489F00BD2759 /* Montserrat-Medium.ttf in Resources */,
 				F96A2437273044F2003331F9 /* Montserrat-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,24 +382,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E2A4A52C28A5802BF0F959C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		59CB70843BB61CFFC06C31E7 /* [CP] Check Pods Manifest.lock */ = {
+		2210ADE9774FBA66DB726A98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,6 +404,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		816F1C8E74CFBB3AA73BFC56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -329,16 +431,31 @@
 				F9ACC7D027317C8C004B9380 /* UIFont+Ext.swift in Sources */,
 				F9ACC7C027315B76004B9380 /* ViewController.swift in Sources */,
 				F9ACC7AC273158E0004B9380 /* OnBoardingView.swift in Sources */,
+				F95B6F5C27469B67007D62D9 /* Notification+Names.swift in Sources */,
 				F9ACC7B927315962004B9380 /* Date.swift in Sources */,
 				F9ACC7B227315927004B9380 /* AccessibilityConstants.swift in Sources */,
+				5BD65E3A27446FD100B4D63D /* BusinessGuidanceViewBuilder.swift in Sources */,
 				F9ACC7BC27315962004B9380 /* String.swift in Sources */,
+				F95B6F522746854B007D62D9 /* String+Constants.swift in Sources */,
 				F9ACC7BD27315962004B9380 /* UIViewController.swift in Sources */,
+				F989842327455666007DEFAB /* LanguageSelectionVC.swift in Sources */,
 				F9ACC7BA27315962004B9380 /* UIView.swift in Sources */,
 				F9ACC7CE27317B84004B9380 /* String+Ext.swift in Sources */,
 				F9ACC7BB27315962004B9380 /* UIColor.swift in Sources */,
+				5BB53D27274ECD54009D42CC /* UIControl+AddAction.swift in Sources */,
+				F95B6F5E27469C34007D62D9 /* LanguageService.swift in Sources */,
+				F9898425274556C4007DEFAB /* LanguageSelectionViewModel.swift in Sources */,
+				F95B6F5A27469895007D62D9 /* BaseViewController.swift in Sources */,
+				F9C15A7D2747C0C7004FE462 /* LandingViewModel.swift in Sources */,
 				F9ACC7C627317190004B9380 /* UpdateManager.swift in Sources */,
+				F95B6F6627469F31007D62D9 /* UserDefault.swift in Sources */,
+				F95B6F4F274684E7007D62D9 /* Logger.swift in Sources */,
 				F9ACC7C127315B76004B9380 /* ScanResultViewController.swift in Sources */,
+				F95B6F532746854B007D62D9 /* ReactiveVarBox.swift in Sources */,
+				F95B6F552746887A007D62D9 /* DateFormatter+Ext.swift in Sources */,
+				F968AF7D27454FBF00BD2759 /* UIView+IBInspectable.swift in Sources */,
 				F96A241E27303BA4003331F9 /* AppDelegate.swift in Sources */,
+				F9C15A7B2747C07F004FE462 /* LandingViewController.swift in Sources */,
 				F9ACC7B127315927004B9380 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +463,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		F94F4390274D3A4000296A49 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F94F438F274D3A4000296A49 /* en */,
+				F94F4391274D3A4500296A49 /* fr-CA */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F96A242327303BA4003331F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,6 +492,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F9ACC7CB273179DC004B9380 /* en */,
+				F91773F42749D065009F6FAB /* fr-CA */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -373,10 +500,92 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F96A242C27303BA7003331F9 /* Debug */ = {
+		F98A769C2750FFFD0001197F /* ADHOC */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = ADHOC;
+		};
+		F98A769D2750FFFD0001197F /* ADHOC */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E16D6AE71EB2383B1D80A26 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.YukonVaccinationVerifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Yukon Vaccination Verifier - Ad Hoc";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				YK_DISPLAY_NAME = "ADH YVV";
+			};
+			name = ADHOC;
+		};
+		F9E7FF482750FA010026E34E /* DEV */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -432,12 +641,37 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = DEV;
 		};
-		F96A242D27303BA7003331F9 /* Release */ = {
+		F9E7FF492750FA010026E34E /* DEV */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4042352198704AD2696C436E /* Pods-YukonVaccinationVerifier.dev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = TCH45SXZ69;
+				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.YukonVaccinationVerifier;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				YK_DISPLAY_NAME = "DEV YVV";
+			};
+			name = DEV;
+		};
+		F9E7FF4A2750FA110026E34E /* TST */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -487,15 +721,16 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = TST;
 		};
-		F96A242F27303BA7003331F9 /* Debug */ = {
+		F9E7FF4B2750FA110026E34E /* TST */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75980D8893128810AC21F53D /* Pods-YukonVaccinationVerifier.debug.xcconfig */;
+			baseConfigurationReference = 489724362B65A136838C18CB /* Pods-YukonVaccinationVerifier.tst.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
@@ -503,16 +738,76 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.freshworks.YukonVaccinationVerifier;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.freshworks.YukonVaccinationVerifier-TST";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Yukon Vaccination Verifier TST";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TST;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				YK_DISPLAY_NAME = "TST YVV";
 			};
-			name = Debug;
+			name = TST;
 		};
-		F96A243027303BA7003331F9 /* Release */ = {
+		F9E7FF4C2750FA2D0026E34E /* STG */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D08D67CEBC54D0B796C0843C /* Pods-YukonVaccinationVerifier.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = STG;
+		};
+		F9E7FF4D2750FA2D0026E34E /* STG */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E63FE48DECAAB0EE587EFE85 /* Pods-YukonVaccinationVerifier.stg.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,13 +820,98 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.yk.gov.vaxcheck-STG";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Yukon Vaccine Verifier distribution - STG";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				YK_DISPLAY_NAME = "STG YVV";
+			};
+			name = STG;
+		};
+		F9E7FF502750FAAB0026E34E /* PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = PROD;
+		};
+		F9E7FF512750FAAB0026E34E /* PROD */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4BDF5459E57D9562A72A76D /* Pods-YukonVaccinationVerifier.prod.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = Z593J8PD3M;
+				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.yk.gov.vaxcheck;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Yukon Vaccine Verifier distribution";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				YK_DISPLAY_NAME = "Yukon Vaccination Verifier";
 			};
-			name = Release;
+			name = PROD;
 		};
 /* End XCBuildConfiguration section */
 
@@ -539,20 +919,26 @@
 		F96A241527303BA4003331F9 /* Build configuration list for PBXProject "YukonVaccinationVerifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F96A242C27303BA7003331F9 /* Debug */,
-				F96A242D27303BA7003331F9 /* Release */,
+				F9E7FF482750FA010026E34E /* DEV */,
+				F9E7FF502750FAAB0026E34E /* PROD */,
+				F98A769C2750FFFD0001197F /* ADHOC */,
+				F9E7FF4C2750FA2D0026E34E /* STG */,
+				F9E7FF4A2750FA110026E34E /* TST */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
 		};
 		F96A242E27303BA7003331F9 /* Build configuration list for PBXNativeTarget "YukonVaccinationVerifier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F96A242F27303BA7003331F9 /* Debug */,
-				F96A243027303BA7003331F9 /* Release */,
+				F9E7FF492750FA010026E34E /* DEV */,
+				F9E7FF512750FAAB0026E34E /* PROD */,
+				F98A769D2750FFFD0001197F /* ADHOC */,
+				F9E7FF4D2750FA2D0026E34E /* STG */,
+				F9E7FF4B2750FA110026E34E /* TST */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = PROD;
 		};
 /* End XCConfigurationList section */
 	};
