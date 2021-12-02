@@ -94,6 +94,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="3MP-sU-peJ"/>
                     <connections>
+                        <outlet property="appLogoImgVw" destination="gul-eD-HKw" id="NZf-iA-4sa"/>
+                        <outlet property="appNameLbl" destination="6nB-D7-imt" id="0Bx-Ii-fll"/>
+                        <outlet property="govLogoImgVw" destination="qQu-iu-pNY" id="Ddf-sO-iR0"/>
                         <segue destination="yia-6Y-9fV" kind="presentation" identifier="showScanResult" id="2le-Jg-LYg"/>
                     </connections>
                 </viewController>

@@ -37,6 +37,13 @@ internal final class LanguageSelectionVC: UIViewController {
         configireAccessibility()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == Segues.toHomeVC {
+            (segue.destination as! ViewController).launchScreenExtension = 0
+        }
+    }
+    
     // MARK: IBActions
     @IBAction func englishContainerTapped(_ sender: UITapGestureRecognizer) {
         viewModel.handleSelection(languageCode: .en)
