@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         LanguageService.prepareDefaultLocaleBundle()
-        BCVaccineValidator.shared.setup(mode: .Prod)
+        setupVaccineValidator()
         return true
     }
     
@@ -25,5 +25,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             return .portrait
         }
+    }
+    
+    private func setupVaccineValidator() {
+        let mode: BCVaccineValidator.Config
+        #if PROD
+            mode = .Prod
+        #elseif STG
+            mode = .Prod
+        #elseif TST
+            mode = .Test
+        #elseif DEV
+            mode = .Dev
+        #else
+            #if DEBUG
+                mode = .Dev
+            #else
+                mode = .Prod
+            #endif
+        #endif
+        BCVaccineValidator.shared.setup(mode: mode)
     }
 }

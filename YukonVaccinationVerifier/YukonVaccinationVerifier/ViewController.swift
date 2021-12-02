@@ -11,6 +11,14 @@ import BCVaccineValidator
 
 /// The core screen that provides the camera interface to scan QR codes.
 internal final class ViewController: BaseViewController {
+    // MARK: Internal IVars
+    internal var launchScreenExtension = Constants.launchScreenExtension
+    
+    // MARK: IBOutlets
+    @IBOutlet weak var govLogoImgVw: UIImageView!
+    @IBOutlet weak var appLogoImgVw: UIImageView!
+    @IBOutlet weak var appNameLbl: UILabel!
+    
     // MARK: Constants
     private let flashOnIcon = UIImage(named: "flashOn")
     private let flashOffIcon = UIImage(named: "flashOff")
@@ -77,7 +85,7 @@ internal final class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Constants.UI.Theme.primaryColor
-        showCameraOrOnboarding()
+        showCameraOrOnboarding(launchScreenExtension: launchScreenExtension)
         Notification.Name.keysUpdated.onPost(object: nil, queue: .main) { [weak self] _ in
             guard let `self` = self else {return}
             self.invalidScannedCodes.removeAll()
@@ -170,14 +178,27 @@ internal final class ViewController: BaseViewController {
     }
     
     // MARK: Class Functions
-    func showCameraOrOnboarding() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.launchScreenExtension) { [weak self] in
-            guard let `self` = self else {return}
+    func showCameraOrOnboarding(launchScreenExtension: Double) {
+        let showCamOrOnboarding = {
             if self.isCameraUsageAuthorized() {
                 self.showCamera()
             } else {
                 self.showOnboarding()
             }
+        }
+        if launchScreenExtension > 0 {
+            govLogoImgVw.isHidden = false
+            appLogoImgVw.isHidden = false
+            appNameLbl.isHidden = false
+            DispatchQueue.main.asyncAfter(deadline: .now() + launchScreenExtension) { [weak self] in
+                guard let _ = self else { return }
+                showCamOrOnboarding()
+            }
+        } else {
+            govLogoImgVw.isHidden = true
+            appLogoImgVw.isHidden = true
+            appNameLbl.isHidden = true
+            showCamOrOnboarding()
         }
     }
     
@@ -216,7 +237,7 @@ internal final class ViewController: BaseViewController {
         } else if status == .denied {
             self.alertCameraAccessIsNecessary()
         } else {
-            showCameraOrOnboarding()
+            showCameraOrOnboarding(launchScreenExtension: 0)
         }
     }
     
