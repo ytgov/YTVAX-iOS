@@ -20,8 +20,7 @@ internal extension String {
     }
     static var officialGovernmentOfYukonResult: String { LanguageService.dynamicLocalizedString("View.Label.OfficialGovernmentOfYukonResult")
     }
-    static var partiallyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.PartiallyVaccinated")
-    }
+    static var partiallyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.PartiallyMeetsRequirement") }
     static var noRecordsFound: String { LanguageService.dynamicLocalizedString("View.Label.NoRecordsFound")
     }
     static var pleaseUpdate: String { LanguageService.dynamicLocalizedString("View.Label.PleaseUpdate")

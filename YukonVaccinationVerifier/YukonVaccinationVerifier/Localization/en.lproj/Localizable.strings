@@ -12,7 +12,7 @@
 "View.Label.Camera...UseThisApp" = "Camera access is necessary to use this app.";
 "View.Label.FullyVaccinated" = "Fully vaccinated";
 "View.Label.OfficialGovernmentOfYukonResult" = "Official Government of Yukon result";
-"View.Label.PartiallyVaccinated" = "Partially vaccinated";
+"View.Label.PartiallyMeetsRequirement" = "Partially meets requirement";
 "View.Label.NoRecordsFound" = "No Records Found";
 "View.Label.PleaseUpdate" = "Please Update";
 "View.Label.ANewVersion...AppStore" = "A new version of this app is available on the app store";

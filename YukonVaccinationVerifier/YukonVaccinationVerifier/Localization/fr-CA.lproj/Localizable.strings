@@ -12,7 +12,7 @@
 "View.Label.Camera...UseThisApp" = "Vous devez autoriser l’accès à la caméra pour pouvoir utiliser l’application.";
 "View.Label.FullyVaccinated" = "Pleinement vacciné";
 "View.Label.OfficialGovernmentOfYukonResult" = "Résultat officiel du gouvernement du Yukon";
-"View.Label.PartiallyVaccinated" = "Partiellement vacciné";
+"View.Label.PartiallyMeetsRequirement" = "Répond partiellement aux exigences";
 "View.Label.NoRecordsFound" = "Aucun dossier trouvé";
 "View.Label.PleaseUpdate" = "Veuillez mettre à jour.";
 "View.Label.ANewVersion...AppStore" = "Nouvelle version téléchargeable à partir du magasin d’applications";
