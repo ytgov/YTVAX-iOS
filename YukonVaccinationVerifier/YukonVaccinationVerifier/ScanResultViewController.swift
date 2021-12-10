@@ -165,13 +165,13 @@ internal final class ScanResultViewController: BaseViewController {
     }
     
     private func stylePartiallyVaxinatedCard() {
-        statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
+        statusContainer.backgroundColor = Constants.UI.Status.partiallyMeetsRequirement.color
         styleStatusCard(foregroundColor: .black)
         cardIcon.isHidden = true
-        let resultTitle = Constants.UI.Status.partiallyVaccinated.cardTitle
+        let resultTitle = Constants.UI.Status.partiallyMeetsRequirement.cardTitle
         cardTitle.text = resultTitle
         cardTitle.accessibilityLabel = resultTitle
-        cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
+        cardSubtitle.text = Constants.UI.Status.partiallyMeetsRequirement.cardSubtitle
         cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
