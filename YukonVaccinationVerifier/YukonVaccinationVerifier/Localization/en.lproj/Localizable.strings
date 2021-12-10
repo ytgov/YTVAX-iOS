@@ -10,7 +10,7 @@
 "View.Label.WeNeedPermission...QRcode" = "We need permission to access your camera to be able to use this service to scan an official government-issued QR code";
 "View.Label.NoCameraAccess" = "No Camera Access";
 "View.Label.Camera...UseThisApp" = "Camera access is necessary to use this app.";
-"View.Label.FullyVaccinated" = "Fully vaccinated";
+"View.Label.MeetsRequirement" = "Meets requirement";
 "View.Label.OfficialGovernmentOfYukonResult" = "Official Government of Yukon result";
 "View.Label.PartiallyMeetsRequirement" = "Partially meets requirement";
 "View.Label.NoRecordsFound" = "No Records Found";

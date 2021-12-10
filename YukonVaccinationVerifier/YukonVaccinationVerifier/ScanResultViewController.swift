@@ -145,11 +145,11 @@ internal final class ScanResultViewController: BaseViewController {
     }
     
     private func styleVaxinatedCard() {
-        statusContainer.backgroundColor = Constants.UI.Status.fullyVaccinated.color
+        statusContainer.backgroundColor = Constants.UI.Status.meetsRequirement.color
         styleStatusCard(foregroundColor: .white)
         cardIcon.image = UIImage(named: "checkmark")
-        cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle
-        cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
+        cardTitle.text = Constants.UI.Status.meetsRequirement.cardTitle
+        cardSubtitle.text = Constants.UI.Status.meetsRequirement.cardSubtitle
         cardTitle.textAlignment = .center
     }
     

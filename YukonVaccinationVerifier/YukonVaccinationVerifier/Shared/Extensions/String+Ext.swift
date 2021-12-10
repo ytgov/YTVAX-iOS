@@ -16,7 +16,7 @@ internal extension String {
     }
     static var camera_UseThisApp: String { LanguageService.dynamicLocalizedString("View.Label.Camera...UseThisApp")
     }
-    static var fullyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.FullyVaccinated")
+    static var meetsRequirement: String { LanguageService.dynamicLocalizedString("View.Label.MeetsRequirement")
     }
     static var officialGovernmentOfYukonResult: String { LanguageService.dynamicLocalizedString("View.Label.OfficialGovernmentOfYukonResult")
     }

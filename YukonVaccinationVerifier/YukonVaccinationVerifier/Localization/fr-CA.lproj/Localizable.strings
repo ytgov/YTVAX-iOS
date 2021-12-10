@@ -10,7 +10,7 @@
 "View.Label.WeNeedPermission...QRcode" = "Vous devez autoriser l’application à accéder à votre caméra pour pouvoir lire un code QR officiel";
 "View.Label.NoCameraAccess" = "Pas d’accès à la caméra";
 "View.Label.Camera...UseThisApp" = "Vous devez autoriser l’accès à la caméra pour pouvoir utiliser l’application.";
-"View.Label.FullyVaccinated" = "Pleinement vacciné";
+"View.Label.MeetsRequirement" = "Répond aux exigences";
 "View.Label.OfficialGovernmentOfYukonResult" = "Résultat officiel du gouvernement du Yukon";
 "View.Label.PartiallyMeetsRequirement" = "Répond partiellement aux exigences";
 "View.Label.NoRecordsFound" = "Aucun dossier trouvé";
