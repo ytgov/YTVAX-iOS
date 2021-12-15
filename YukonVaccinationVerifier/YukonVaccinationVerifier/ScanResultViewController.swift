@@ -75,12 +75,12 @@ internal final class ScanResultViewController: BaseViewController {
         guard let model = self.model else {return}
         nameLabel.text = model.name.uppercased()
         switch model.status {
-        case .Fully:
-            styleVaxinatedCard()
+        case .Fully, .Exempt:
+            styleMeetsRequirementCard()
         case .None:
             styleNotVaxinatedCard()
         case .Partially:
-            stylePartiallyVaxinatedCard()
+            stylePartiallyMeetsRequirementCard()
         }
     }
     
@@ -144,7 +144,7 @@ internal final class ScanResultViewController: BaseViewController {
         cardSubtitle.textColor = foregroundColor
     }
     
-    private func styleVaxinatedCard() {
+    private func styleMeetsRequirementCard() {
         statusContainer.backgroundColor = Constants.UI.Status.meetsRequirement.color
         styleStatusCard(foregroundColor: .white)
         cardIcon.image = UIImage(named: "checkmark")
@@ -164,7 +164,7 @@ internal final class ScanResultViewController: BaseViewController {
         cardTitle.textAlignment = .center
     }
     
-    private func stylePartiallyVaxinatedCard() {
+    private func stylePartiallyMeetsRequirementCard() {
         statusContainer.backgroundColor = Constants.UI.Status.partiallyMeetsRequirement.color
         styleStatusCard(foregroundColor: .black)
         cardIcon.isHidden = true
