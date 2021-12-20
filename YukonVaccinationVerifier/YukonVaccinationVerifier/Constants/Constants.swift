@@ -193,14 +193,14 @@ struct Constants {
             static let textColor = UIColor.white
             
             // MARK: Status Colours
-            struct fullyVaccinated {
+            struct meetsRequirement {
                 static let color = UIColor(hexString: "#244402")
-                static var cardTitle: String { .fullyVaccinated }
+                static var cardTitle: String { .meetsRequirement }
                 static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
-            struct partiallyVaccinated {
+            struct partiallyMeetsRequirement {
                 static let color = UIColor(hexString: "#F2A900")
-                static var cardTitle: String { .partiallyVaccinated }
+                static var cardTitle: String { .partiallyMeetsRequirement }
                 static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
             

@@ -16,12 +16,11 @@ internal extension String {
     }
     static var camera_UseThisApp: String { LanguageService.dynamicLocalizedString("View.Label.Camera...UseThisApp")
     }
-    static var fullyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.FullyVaccinated")
+    static var meetsRequirement: String { LanguageService.dynamicLocalizedString("View.Label.MeetsRequirement")
     }
     static var officialGovernmentOfYukonResult: String { LanguageService.dynamicLocalizedString("View.Label.OfficialGovernmentOfYukonResult")
     }
-    static var partiallyVaccinated: String { LanguageService.dynamicLocalizedString("View.Label.PartiallyVaccinated")
-    }
+    static var partiallyMeetsRequirement: String { LanguageService.dynamicLocalizedString("View.Label.PartiallyMeetsRequirement") }
     static var noRecordsFound: String { LanguageService.dynamicLocalizedString("View.Label.NoRecordsFound")
     }
     static var pleaseUpdate: String { LanguageService.dynamicLocalizedString("View.Label.PleaseUpdate")

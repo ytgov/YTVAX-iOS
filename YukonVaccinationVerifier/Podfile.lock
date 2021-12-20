@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (5.4.4)
-  - BCVaccineValidator (1.0.4):
+  - BCVaccineValidator (1.0.9):
     - Alamofire
     - JOSESwift
   - JOSESwift (2.4.0)
 
 DEPENDENCIES:
-  - BCVaccineValidator (from `https://github.com/AfsarFresh/iOSVaccineValidator.git`, branch `yukon-endpoints`)
+  - BCVaccineValidator (from `https://github.com/AfsarFresh/iOSVaccineValidator.git`, tag `YVV_V_1_2_B_1`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -15,19 +15,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   BCVaccineValidator:
-    :branch: yukon-endpoints
     :git: https://github.com/AfsarFresh/iOSVaccineValidator.git
+    :tag: YVV_V_1_2_B_1
 
 CHECKOUT OPTIONS:
   BCVaccineValidator:
-    :commit: 0b622c03e6ae9bea881f064af9aaf146929a1603
     :git: https://github.com/AfsarFresh/iOSVaccineValidator.git
+    :tag: YVV_V_1_2_B_1
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
-  BCVaccineValidator: c378f0f2bcda1f3a98d8e224ad12454493322830
+  BCVaccineValidator: 9f5ecb5accb833cbeab1220df42f7d5235be2eee
   JOSESwift: 7ff178bb9173ff42c6e990929a9f2fa702a34f69
 
-PODFILE CHECKSUM: f04e45cdf53ec97c1aae386d38394c0af59c5293
+PODFILE CHECKSUM: c6958a901d606a421bf40af646c490aea96666be
 
 COCOAPODS: 1.11.2

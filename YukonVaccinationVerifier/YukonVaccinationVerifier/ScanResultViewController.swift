@@ -75,12 +75,12 @@ internal final class ScanResultViewController: BaseViewController {
         guard let model = self.model else {return}
         nameLabel.text = model.name.uppercased()
         switch model.status {
-        case .Fully:
-            styleVaxinatedCard()
+        case .Fully, .Exempt:
+            styleMeetsRequirementCard()
         case .None:
             styleNotVaxinatedCard()
         case .Partially:
-            stylePartiallyVaxinatedCard()
+            stylePartiallyMeetsRequirementCard()
         }
     }
     
@@ -144,12 +144,12 @@ internal final class ScanResultViewController: BaseViewController {
         cardSubtitle.textColor = foregroundColor
     }
     
-    private func styleVaxinatedCard() {
-        statusContainer.backgroundColor = Constants.UI.Status.fullyVaccinated.color
+    private func styleMeetsRequirementCard() {
+        statusContainer.backgroundColor = Constants.UI.Status.meetsRequirement.color
         styleStatusCard(foregroundColor: .white)
         cardIcon.image = UIImage(named: "checkmark")
-        cardTitle.text = Constants.UI.Status.fullyVaccinated.cardTitle
-        cardSubtitle.text = Constants.UI.Status.fullyVaccinated.cardSubtitle
+        cardTitle.text = Constants.UI.Status.meetsRequirement.cardTitle
+        cardSubtitle.text = Constants.UI.Status.meetsRequirement.cardSubtitle
         cardTitle.textAlignment = .center
     }
     
@@ -164,14 +164,14 @@ internal final class ScanResultViewController: BaseViewController {
         cardTitle.textAlignment = .center
     }
     
-    private func stylePartiallyVaxinatedCard() {
-        statusContainer.backgroundColor = Constants.UI.Status.partiallyVaccinated.color
+    private func stylePartiallyMeetsRequirementCard() {
+        statusContainer.backgroundColor = Constants.UI.Status.partiallyMeetsRequirement.color
         styleStatusCard(foregroundColor: .black)
         cardIcon.isHidden = true
-        let resultTitle = Constants.UI.Status.partiallyVaccinated.cardTitle
+        let resultTitle = Constants.UI.Status.partiallyMeetsRequirement.cardTitle
         cardTitle.text = resultTitle
         cardTitle.accessibilityLabel = resultTitle
-        cardSubtitle.text = Constants.UI.Status.partiallyVaccinated.cardSubtitle
+        cardSubtitle.text = Constants.UI.Status.partiallyMeetsRequirement.cardSubtitle
         cardTitle.textAlignment = .center
         statusCardContainer.layer.borderWidth = 0
         view.layoutIfNeeded()
