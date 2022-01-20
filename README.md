@@ -33,9 +33,9 @@
 
 Language: __Swift__
 
-Architecture: __MVVM__
+Design pattern: __MVVM__
 
--  Architecture used for app: MVVM
+-  Design pattern used for app: MVVM
   - The default iOS navigation system is used. The View controllers are embedded in the Navigation controller. Business logic is present in a dependency named BCVaccineValidator. View models associated with View controllers separate the UI from business logic. 
   - Does it differ from standard architecture? No.
   - Include UML diagram if needed. NA
