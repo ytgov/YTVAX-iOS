@@ -84,6 +84,7 @@
 		F96A2434273044F2003331F9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		F96A2435273044F2003331F9 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		F96A2436273044F2003331F9 /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F96CA1B427987EC100CD04CC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F989842227455665007DEFAB /* LanguageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionVC.swift; sourceTree = "<group>"; };
 		F9898424274556C4007DEFAB /* LanguageSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionViewModel.swift; sourceTree = "<group>"; };
 		F9ACC7AA273158E0004B9380 /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		F96A241127303BA4003331F9 = {
 			isa = PBXGroup;
 			children = (
+				F96CA1B427987EC100CD04CC /* README.md */,
 				F96A241C27303BA4003331F9 /* YukonVaccinationVerifier */,
 				F96A241B27303BA4003331F9 /* Products */,
 				D89F097884C13647125BCC0E /* Pods */,
