@@ -78,7 +78,7 @@ internal final class ScanResultViewController: BaseViewController {
         case .Fully, .Exempt:
             styleMeetsRequirementCard()
         case .None:
-            styleNotVaxinatedCard()
+            styleDoesNotMeetRequirement()
         case .Partially:
             stylePartiallyMeetsRequirementCard()
         }
@@ -153,14 +153,15 @@ internal final class ScanResultViewController: BaseViewController {
         cardTitle.textAlignment = .center
     }
     
-    private func styleNotVaxinatedCard() {
-        statusContainer.backgroundColor = Constants.UI.Status.notVaccinated.color
+    private func styleDoesNotMeetRequirement() {
+        statusContainer.backgroundColor = Constants.UI.Status.doesNotMeetRequirement.color
         styleStatusCard(foregroundColor: .white)
+        statusCardContainer.borderColor = .white.withAlphaComponent(0.3)
         cardIcon.isHidden = true
-        let resultTitle = Constants.UI.Status.notVaccinated.cardTitle
+        let resultTitle = Constants.UI.Status.doesNotMeetRequirement.cardTitle
         cardTitle.text = resultTitle
         cardTitle.accessibilityLabel = resultTitle
-        cardSubtitle.text = Constants.UI.Status.notVaccinated.cardSubtitle
+        cardSubtitle.text = Constants.UI.Status.doesNotMeetRequirement.cardSubtitle
         cardTitle.textAlignment = .center
     }
     
