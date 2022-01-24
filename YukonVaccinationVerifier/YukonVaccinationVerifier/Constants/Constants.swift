@@ -204,9 +204,9 @@ struct Constants {
                 static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
             
-            struct notVaccinated {
-                static let color = UIColor(hexString: "#b6b6b6")
-                static var cardTitle: String { .noRecordsFound }
+            struct doesNotMeetRequirement {
+                static let color = UIColor(hexString: "#6C757D")
+                static var cardTitle: String { .doesNotMeetRequirement }
                 static var cardSubtitle: String { .officialGovernmentOfYukonResult }
             }
         }

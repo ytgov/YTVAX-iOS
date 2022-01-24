@@ -21,8 +21,7 @@ internal extension String {
     static var officialGovernmentOfYukonResult: String { LanguageService.dynamicLocalizedString("View.Label.OfficialGovernmentOfYukonResult")
     }
     static var partiallyMeetsRequirement: String { LanguageService.dynamicLocalizedString("View.Label.PartiallyMeetsRequirement") }
-    static var noRecordsFound: String { LanguageService.dynamicLocalizedString("View.Label.NoRecordsFound")
-    }
+    static var doesNotMeetRequirement: String { LanguageService.dynamicLocalizedString("View.Label.DoesNotMeetRequirement") }
     static var pleaseUpdate: String { LanguageService.dynamicLocalizedString("View.Label.PleaseUpdate")
     }
     static var aNewVersion_AppStore: String { LanguageService.dynamicLocalizedString("View.Label.ANewVersion...AppStore")

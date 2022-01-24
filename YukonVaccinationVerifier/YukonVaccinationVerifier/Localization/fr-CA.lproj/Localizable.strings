@@ -13,7 +13,7 @@
 "View.Label.MeetsRequirement" = "Répond aux exigences";
 "View.Label.OfficialGovernmentOfYukonResult" = "Résultat officiel du gouvernement du Yukon";
 "View.Label.PartiallyMeetsRequirement" = "Répond partiellement aux exigences";
-"View.Label.NoRecordsFound" = "Aucun dossier trouvé";
+"View.Label.DoesNotMeetRequirement" = "Ne répond pas aux exigences";
 "View.Label.PleaseUpdate" = "Veuillez mettre à jour.";
 "View.Label.ANewVersion...AppStore" = "Nouvelle version téléchargeable à partir du magasin d’applications";
 "View.Label.CovidInfo" = "Informations sur la COVID-19";
