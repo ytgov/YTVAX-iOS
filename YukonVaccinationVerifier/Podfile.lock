@@ -6,7 +6,7 @@ PODS:
   - JOSESwift (2.4.0)
 
 DEPENDENCIES:
-  - BCVaccineValidator (from `https://github.com/AfsarFresh/iOSVaccineValidator.git`, tag `1_3_B_1-Testing`)
+  - BCVaccineValidator (from `https://github.com/AfsarFresh/iOSVaccineValidator.git`, tag `YVV_V_1_3_B_3-Testing`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -16,18 +16,18 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   BCVaccineValidator:
     :git: https://github.com/AfsarFresh/iOSVaccineValidator.git
-    :tag: 1_3_B_1-Testing
+    :tag: YVV_V_1_3_B_3-Testing
 
 CHECKOUT OPTIONS:
   BCVaccineValidator:
     :git: https://github.com/AfsarFresh/iOSVaccineValidator.git
-    :tag: 1_3_B_1-Testing
+    :tag: YVV_V_1_3_B_3-Testing
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   BCVaccineValidator: 7a41c49aa40531f74d9fb5104a5b7b104527d6d4
   JOSESwift: 7ff178bb9173ff42c6e990929a9f2fa702a34f69
 
-PODFILE CHECKSUM: 60f3ffdf294ba5c750a25bde1af74d3cbdad2772
+PODFILE CHECKSUM: ab109a1cd017162d47cec49d3cf516bb3f2edf9e
 
 COCOAPODS: 1.11.2
