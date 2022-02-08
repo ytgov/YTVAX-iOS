@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5BB53D27274ECD54009D42CC /* UIControl+AddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB53D26274ECD54009D42CC /* UIControl+AddAction.swift */; };
 		5BD65E3A27446FD100B4D63D /* BusinessGuidanceViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */; };
-		F53FE2E27742B20820396011 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56645120213C75D85B0B095D /* Pods_YukonVaccinationVerifier.framework */; };
+		7E50CE78DCEA139355AFFE19 /* Pods_YukonVaccinationVerifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C34DD060C35B22FB7456A554 /* Pods_YukonVaccinationVerifier.framework */; };
 		F94F438E274D3A4000296A49 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F94F4390274D3A4000296A49 /* InfoPlist.strings */; };
 		F95B6F4F274684E7007D62D9 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F4E274684E7007D62D9 /* Logger.swift */; };
 		F95B6F522746854B007D62D9 /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95B6F502746854B007D62D9 /* String+Constants.swift */; };
@@ -53,14 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DC54DBE9D06C1EBE6C149F6 /* Pods-YukonVaccinationVerifier.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.prod.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.prod.xcconfig"; sourceTree = "<group>"; };
-		416FCAD040DEF48134C60529 /* Pods-YukonVaccinationVerifier.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.dev.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.dev.xcconfig"; sourceTree = "<group>"; };
-		4455092513451B04F21EE6BB /* Pods-YukonVaccinationVerifier.tst.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.tst.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.tst.xcconfig"; sourceTree = "<group>"; };
-		56645120213C75D85B0B095D /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04F222377AFC8A2436BD70FA /* Pods-YukonVaccinationVerifier.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.dev.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.dev.xcconfig"; sourceTree = "<group>"; };
 		5BB53D26274ECD54009D42CC /* UIControl+AddAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+AddAction.swift"; path = "YukonVaccinationVerifier/Extensions & utilities/UIControl+AddAction.swift"; sourceTree = SOURCE_ROOT; };
 		5BD65E3927446FD000B4D63D /* BusinessGuidanceViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessGuidanceViewBuilder.swift; sourceTree = "<group>"; };
-		A41B41D4E5B739FB3724FE7C /* Pods-YukonVaccinationVerifier.stg.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.stg.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.stg.xcconfig"; sourceTree = "<group>"; };
-		C5545F5B48A373CD6453DA17 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.adhoc.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.adhoc.xcconfig"; sourceTree = "<group>"; };
+		7CA68C646FE906434727E844 /* Pods-YukonVaccinationVerifier.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.prod.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.prod.xcconfig"; sourceTree = "<group>"; };
+		956FA8048832272BB18EA488 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.adhoc.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.adhoc.xcconfig"; sourceTree = "<group>"; };
+		AD5B3E4DE1149972A3598460 /* Pods-YukonVaccinationVerifier.tst.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.tst.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.tst.xcconfig"; sourceTree = "<group>"; };
+		C34DD060C35B22FB7456A554 /* Pods_YukonVaccinationVerifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YukonVaccinationVerifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D0D01635940CD6ED372BEA /* Pods-YukonVaccinationVerifier.stg.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YukonVaccinationVerifier.stg.xcconfig"; path = "Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier.stg.xcconfig"; sourceTree = "<group>"; };
 		F91773F42749D065009F6FAB /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F94F438F274D3A4000296A49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F94F4391274D3A4500296A49 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -113,31 +113,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F53FE2E27742B20820396011 /* Pods_YukonVaccinationVerifier.framework in Frameworks */,
+				7E50CE78DCEA139355AFFE19 /* Pods_YukonVaccinationVerifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AD690676FFBB10C10F25DDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C34DD060C35B22FB7456A554 /* Pods_YukonVaccinationVerifier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D89F097884C13647125BCC0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				416FCAD040DEF48134C60529 /* Pods-YukonVaccinationVerifier.dev.xcconfig */,
-				2DC54DBE9D06C1EBE6C149F6 /* Pods-YukonVaccinationVerifier.prod.xcconfig */,
-				C5545F5B48A373CD6453DA17 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */,
-				A41B41D4E5B739FB3724FE7C /* Pods-YukonVaccinationVerifier.stg.xcconfig */,
-				4455092513451B04F21EE6BB /* Pods-YukonVaccinationVerifier.tst.xcconfig */,
+				04F222377AFC8A2436BD70FA /* Pods-YukonVaccinationVerifier.dev.xcconfig */,
+				7CA68C646FE906434727E844 /* Pods-YukonVaccinationVerifier.prod.xcconfig */,
+				956FA8048832272BB18EA488 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */,
+				C6D0D01635940CD6ED372BEA /* Pods-YukonVaccinationVerifier.stg.xcconfig */,
+				AD5B3E4DE1149972A3598460 /* Pods-YukonVaccinationVerifier.tst.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		DC40ACA8457EFB2E8B79025A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				56645120213C75D85B0B095D /* Pods_YukonVaccinationVerifier.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F95B6F56274697FE007D62D9 /* Shared */ = {
@@ -176,7 +176,7 @@
 				F96A241C27303BA4003331F9 /* YukonVaccinationVerifier */,
 				F96A241B27303BA4003331F9 /* Products */,
 				D89F097884C13647125BCC0E /* Pods */,
-				DC40ACA8457EFB2E8B79025A /* Frameworks */,
+				8AD690676FFBB10C10F25DDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,11 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F96A242E27303BA7003331F9 /* Build configuration list for PBXNativeTarget "YukonVaccinationVerifier" */;
 			buildPhases = (
-				EB2487233A55A6E36E9A0331 /* [CP] Check Pods Manifest.lock */,
+				B6696C8A21DC39694741E322 /* [CP] Check Pods Manifest.lock */,
 				F96A241627303BA4003331F9 /* Sources */,
 				F96A241727303BA4003331F9 /* Frameworks */,
 				F96A241827303BA4003331F9 /* Resources */,
-				3D5A0C586800F6020AB173BF /* [CP] Embed Pods Frameworks */,
+				E91AD65402C9B84EB48BAE3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -384,24 +384,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D5A0C586800F6020AB173BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB2487233A55A6E36E9A0331 /* [CP] Check Pods Manifest.lock */ = {
+		B6696C8A21DC39694741E322 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,6 +404,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91AD65402C9B84EB48BAE3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YukonVaccinationVerifier/Pods-YukonVaccinationVerifier-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -560,13 +560,13 @@
 		};
 		F98A769D2750FFFD0001197F /* ADHOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5545F5B48A373CD6453DA17 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */;
+			baseConfigurationReference = 956FA8048832272BB18EA488 /* Pods-YukonVaccinationVerifier.adhoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,12 +647,12 @@
 		};
 		F9E7FF492750FA010026E34E /* DEV */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 416FCAD040DEF48134C60529 /* Pods-YukonVaccinationVerifier.dev.xcconfig */;
+			baseConfigurationReference = 04F222377AFC8A2436BD70FA /* Pods-YukonVaccinationVerifier.dev.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -727,13 +727,13 @@
 		};
 		F9E7FF4B2750FA110026E34E /* TST */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4455092513451B04F21EE6BB /* Pods-YukonVaccinationVerifier.tst.xcconfig */;
+			baseConfigurationReference = AD5B3E4DE1149972A3598460 /* Pods-YukonVaccinationVerifier.tst.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = TCH45SXZ69;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -809,13 +809,13 @@
 		};
 		F9E7FF4D2750FA2D0026E34E /* STG */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A41B41D4E5B739FB3724FE7C /* Pods-YukonVaccinationVerifier.stg.xcconfig */;
+			baseConfigurationReference = C6D0D01635940CD6ED372BEA /* Pods-YukonVaccinationVerifier.stg.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = Z593J8PD3M;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -891,13 +891,13 @@
 		};
 		F9E7FF512750FAAB0026E34E /* PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DC54DBE9D06C1EBE6C149F6 /* Pods-YukonVaccinationVerifier.prod.xcconfig */;
+			baseConfigurationReference = 7CA68C646FE906434727E844 /* Pods-YukonVaccinationVerifier.prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = Z593J8PD3M;
 				INFOPLIST_FILE = YukonVaccinationVerifier/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

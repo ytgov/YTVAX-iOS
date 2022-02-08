@@ -14,7 +14,7 @@ target 'YukonVaccinationVerifier' do
 
   # Pods for YukonVaccinationVerifier
 
-  pod 'BCVaccineValidator', :git => 'https://github.com/AfsarFresh/iOSVaccineValidator.git', :tag => 'YVV_V_1_3_B_3-Testing'
+  pod 'BCVaccineValidator', :git => 'https://github.com/AfsarFresh/iOSVaccineValidator.git', :tag => 'YVV_V_1_3_B_4'
 
   # pod 'BCVaccineValidator', :git => 'https://github.com/AfsarFresh/iOSVaccineValidator.git', :branch => 'timeBetweenDosesAndYukonExemptions'
   
