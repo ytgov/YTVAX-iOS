@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #elseif STG
             mode = .Test
         #elseif TST
-            mode = .Test
+            mode = .Dev
         #elseif DEV
             mode = .Dev
         #else
